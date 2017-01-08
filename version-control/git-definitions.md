@@ -9,3 +9,4 @@ A branch is a duplicate of a code or program. You would use a branch to create v
 * What is a commit? What makes a good commit message?
 Commit is the component of version control that manages changes to programs, code, documents, etc. A commit "saves" the changes to the repository. A good commit message is short but detailed. Ex: We make text in our file blue --> git commit -m "Implement blue text"
 * What is a merge conflict?
+A merge conflict is when you are trying to merge branches and there are commits in one branch that are not in the other branch. 
