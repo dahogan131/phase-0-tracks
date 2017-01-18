@@ -1,3 +1,5 @@
-#octopus {
-	margin-left: 300px;
+img.octopus {
+	display: block;
+	margin: 0 auto 0 auto;
 }
+
