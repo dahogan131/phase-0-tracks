@@ -1,6 +1,3 @@
 #octopus {
-	image-rendering: url("octopus.png");
-	position: absolute;
-	top: 0px;
-	left: 0px;
+	margin-left: 300px;
 }
