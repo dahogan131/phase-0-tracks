@@ -16,3 +16,20 @@
 *Has the elevator arrived at the destination floor?
   -If "No", do nothing.
   -If "Yes", open door and say "thank you for riding."
+
+**Bigfoot Waking Up**
+*Task initiated by opening eyes. 
+  -If the difference in the current time and time having fallen asleep is < 6 hours, go back to sleep and initiate second sleep sequence.
+    *After second sleep sequence, open eyes. 
+      -If sum of first and second sleep sequences is > 6 hours, keep eyes open.
+      -If sum of first and second sleep sequences is < 6 hours, go back to sleep and initiate third sleep sequence.
+        *After 3rd sleep sequence, open eyes.
+          -If sum of 1st, 2nd and 3rd sleep sequences > 6 hours, keep eyes open.
+          -If sum of 1st, 2nd and 3rd sleep sequences < 6 hours, keep eyes open.
+  -If this difference is > 6 hours, keep eyes open. 
+*With eyes open, reposition body from 180 degree lying-down position to a 90 degree sitting up position on the y-axis. 
+*Pivot frame 90 degrees on the x and z axis that make up the lateral area of the bed. Front-facing edge of lateral plane.
+*Position legs from knee-portion down off the lateral area of the bed and position 90 degrees downward on y-axis. 
+*Perform concurrent motion of body from knees to back away from and off the lateral area of the bed, while the y-axis of the body forming a straight, up-and-down formation. 
+*Feet are on the lateral area encompassing the floor not overlapped by the lateral area of the bed. 
+
