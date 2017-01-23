@@ -1,0 +1,11 @@
+**Elevator Algorithm**
+*Has the user pushed the "Door Open" button?
+  -If "No", do nothing.
+  -If "Yes", on which floor (1 to n) was the "Door Open" button pressed?
+    -If "Door Open" button was pressed on your current floor, open the door.
+    -If "Door Open" button was pressed on a different floor, press the button of the corresponding floor. 
+      -If you have arrived on the corresponding floor, open the doors.
+      -If you have not arrived on the corresponding floor, keep the doors shut.
+*Has the user boarded the elevator?
+  -If "No", keep doors open.
+  -If "Yes", close doors. 
