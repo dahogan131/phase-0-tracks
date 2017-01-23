@@ -1,7 +1,7 @@
-**Elevator Algorithm**
+**Elevator Algorithm (for a 10 story building)**
 *Has the user pushed the "Door Open" button?
   -If "No", do nothing.
-  -If "Yes", on which floor (1 to n) was the "Door Open" button pressed?
+  -If "Yes", on which floor (1 to 10) was the "Door Open" button pressed?
     -If "Door Open" button was pressed on your current floor, open the door.
     -If "Door Open" button was pressed on a different floor, press the button of the corresponding floor. 
       -If you have arrived on the corresponding floor, open the doors.
@@ -9,3 +9,10 @@
 *Has the user boarded the elevator?
   -If "No", keep doors open.
   -If "Yes", close doors. 
+*Ask user to select a destination floor.
+  -If user response is less than 10 but greater than 1, press the button with the corresponding number. 
+  -If user response is equal to 1 or 10, press the button with the corresponding number. 
+  -If user response is anything else, do not press any buttons and reply with "Sorry, that is an invalid destination."
+*Has the elevator arrived at the destination floor?
+  -If "No", do nothing.
+  -If "Yes", open door and say "thank you for riding."
