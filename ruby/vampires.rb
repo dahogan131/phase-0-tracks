@@ -30,7 +30,7 @@ p "Thank you for your honest responses, #{user_name}!"
 
 vamp_database_array = ["Dracula", "Nosfaratu", "Wolfenstein", "Chocula"]
 
-if user_name = vamp_database_array
+if user_name == vamp_database_array
 	p "VAMPIRE!"
 else
 	p "Hello!"
