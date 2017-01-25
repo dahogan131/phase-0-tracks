@@ -28,16 +28,10 @@ hmo_answer = gets.chomp
 
 p "Thank you for your honest responses, #{user_name}!"
 
-wolves_like_sunshine = true
-wolves_like_garlic = true
-vampires_like_sunshine = false
-vampires_like_garlic = false
+vamp_database_array = ["Dracula", "Nosfaratu", "Wolfenstein", "Chocula"]
 
-wolves_like_garlic && wolves_like_sunshine
-wolves_like_garlic || vampires_like_garlic
-wolves_like_garlic && vampires_like_garlic
-wolves_like_garlic && (vampires_like_sunshine || vampires_like_garlic)
-(wolves_like_garlic && vampires_like_garlic) || wolves_like_sunshine
-vampires_like_garlic
-!vampires_like_garlic
-!(wolves_like_sunshine && wolves_like_garlic)
+if user_name = vamp_database_array
+	p "VAMPIRE!"
+else
+	p "Hello!"
+end
