@@ -35,6 +35,18 @@ else
 	p "#{hamster_name} is #{age_est} years old!"
 end
 
+p "Your hamster's name is #{hamster_name}."
+p "#{hamster_name} has a volume level of #{vol_level}."
+p "#{hamster_name}'s fur color is #{fur_color}."
+p "#{hamster_name} is #{age_est} years old!"
+if adoptable == true
+	p "#{hamster_name} is adoptable!"
+else
+	p "#{hamster_name} is not adoptable!"
+end
+
+
+
 
 
 #hamster_name = gets.chomp
