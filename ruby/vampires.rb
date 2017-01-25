@@ -11,3 +11,19 @@ user_answer = gets.chomp
 
 p "#{user_name}, did you want to enroll in our company healthcare plan?"
 hmo_answer = gets.chomp
+
+p "Thank you for your honest responses, #{user_name}!"
+
+wolves_like_sunshine = true
+wolves_like_garlic = true
+vampires_like_sunshine = false
+vampires_like_garlic = false
+
+wolves_like_garlic && wolves_like_sunshine
+wolves_like_garlic || vampires_like_garlic
+wolves_like_garlic && vampires_like_garlic
+wolves_like_garlic && (vampires_like_sunshine || vampires_like_garlic)
+(wolves_like_garlic && vampires_like_garlic) || wolves_like_sunshine
+vampires_like_garlic
+!vampires_like_garlic
+!(wolves_like_sunshine && wolves_like_garlic)
