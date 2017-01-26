@@ -28,10 +28,41 @@ hmo_answer = gets.chomp
 
 p "Thank you for your honest responses, #{user_name}!"
 
-vamp_database_array = ["Dracula", "Nosfaratu", "Wolfenstein", "Chocula"]
 
-if user_name == vamp_database_array
-	p "VAMPIRE!"
+
+if user_name == ("Dracula" || "Nosforatu" || "Chocula")
+	vamp_name = true
 else
-	p "Hello!"
+	vamp_name = false
 end
+
+if user_age > 120
+	vamp_age = true
+else
+	vamp_age = false
+end
+
+if user_answer == "no"
+	vamp_answer = true
+else
+	vamp_answer = false
+end
+
+if hmo_answer == "no"
+	vamp_hmo = true
+else
+	vamp_hmo = false
+end
+
+if vamp_name == true
+	p "Definitely a vampire."
+elsif (vamp_age == true && vamp_answer == true && vamp_hmo == true)
+	p "Almost certainly a vampire"
+elsif vamp_age == true && (vamp_answer == true || vamp_hmo == true)
+	p "Probably a vampire"
+elsif (vamp_age == false && vamp_name == false && vamp_answer == false && vamp_hmo == false)
+	p "Probably not a vampire."
+else
+	p "Dunno... could be... try and put 'em in the sun."
+end
+	
