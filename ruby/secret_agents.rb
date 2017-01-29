@@ -72,3 +72,6 @@ while index < str.length
 end
 
 p str_back
+
+str_back(str("pit"))
+
