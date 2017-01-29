@@ -1,4 +1,5 @@
-name = "bigfoot"
+p "this program will encrypt and then decrypt a string. Please insert a word."
+name = gets.chomp
 encrypted_name = name.gsub(/./) do |word|
   word.next
 end
@@ -65,7 +66,7 @@ while index < str.length
   elsif str[index] == "z" 
     str_back[index] = "y"
   else 
-    p "0"
+    str_back[index] = " "
   end
   index += 1 
 end
