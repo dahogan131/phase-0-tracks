@@ -1,10 +1,12 @@
 name = "bigfoot"
-name = name.gsub(/./) do |word|
+encrypted_name = name.gsub(/./) do |word|
   word.next
 end
-puts name
+puts encrypted_name
 
-encrypted_message = name
+#str_back represents the decrypted message. 
+
+encrypted_message = encrypted_name
 index = 0 
 str = encrypted_message
 str_back = ""
