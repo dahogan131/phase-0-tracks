@@ -35,4 +35,28 @@
 
 * Return Value: Return value is the string, integer or boolean value that is returned as the output of the method. 
 
-*
+* Side Effect: A side effect is when the program does something unexpected (outside the algorithm). 
+
+* Parameter: A list of variables in a parenthesis alongside the declared method. The variables in a parameter are the arguments in the method. 
+
+* Argument: An argument is a string or integer value that is put in parenthesis next to the name of the method. A method can have one or multiple arguments, and they behave similarly to variables.
+
+* Implicit Return: Implicit return is the value reported back by the method. I've honestly had a difficult time finding a comprehensive definition, but the code samples I looked at seemed to have an explicit return when a return value was stated in the method, while an implicit return existed when no return value was stated in the method. 
+
+8. What are global scope and method scope? How do those scopes impact the availability of data at different points in a program?
+
+* Scope refers to regions of the code that can access the present variables. Global scope encompasses the entirity of the code, while method scope encompasses certain methods within the program. Global scope allows variables to be accessible at any location of the program, while method scope makes access to variables method-specific. 
+
+9. What is control flow? Why might a programmer choose to use flow control?
+
+* Control flow is the organized order of statements in a program. It is needed to make sure the program corresponds with it's algorithm. For example, If I wanted to write a program that counted down from 5 to 0 every time the user put in the wrong password, I would want my "while" statement to come first and encompass my "until" statement. 
+
+10. Define the following terms as they relate to flow control.
+
+* Loop: A loop allows for the same action to continue until certain conditions are met. 
+
+* If/Elsif/Else: Outcomes in an if/else conditional statement. If, Elsif and Else outline potential outcomes, and depending which conditions were met earlier in the workflow will determine which outcome will result. 
+
+* While: While is a loop that continues while a condition has or has not been met. An example of a while loop would be entering a password. 
+
+*Until: Until is a loop that continues until an indicated value has been met. It is used for counting up or down to a set value, among other things.
