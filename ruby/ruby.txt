@@ -1,0 +1,4 @@
+1. What is a variable? Why might a programmer use a variable?
+*A variable represents a string, boolean or integer value. A programmer would use a variable to apply values to a loop, conditional, method or equation.
+
+2. 
