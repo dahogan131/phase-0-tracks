@@ -1,4 +1,38 @@
 1. What is a variable? Why might a programmer use a variable?
-*A variable represents a string, boolean or integer value. A programmer would use a variable to apply values to a loop, conditional, method or equation.
 
-2. 
+* A variable represents a string, boolean or integer value. A programmer would use a variable to apply values to a loop, conditional, method or equation.
+
+2. If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be.
+
+* The order goes from left to right, just like when you read. The final result would be "AbrahamLincoln," unless you inlude a space at the beginning of "Lincoln" or the ending of "Abraham," at which point it would be "Abraham Lincoln."
+
+3. For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program. (Don't use an example we've already provided.)
+
+* String: Inidivual or multiple words, characterized by being in quotes. Strings can be used to assign a password that a user must replicate to gain access. 
+
+* Integer: A number value. Integers would be used, among other reasons, to perform arithmetic in a program, serve as a coefficient for a function, indeces for strings and to establish limits for loops and conditionals. 
+
+* Float: A float is a number with a decimal point. If I were writing a banking program and would be running dollar and cent values (e.x. $2.50), it would make sense to use floats. 
+
+* Nil: Nil is used when a variable is present in a program, but we don't necessarily want to assign it a value at that point in the program. I would assign a variable a nil value if the variable was present in a function, but I did not want that variable to operate in that function at that point in the program. 
+
+* Boolean: A Boolean simply holds a value of true or false. Booleans can be used for conditional statements to determine if/elsif outcomes. I have used them to write simple programs for yes/no surveys and generated responses using if/else statements based upon which booleans were true or false. 
+
+4. What is an Algorithm?
+
+* An Algorithm is a step by step for what it is you want your program to do and how you will get the program to do it. In coding, an algorithm is based on formulating how strings, integers, booleans, conditionals, methods and loops will be used to perform the task you want your program to do. 
+
+5. What are two common categories of algorithm in computer science? 
+
+* Searching: Searches a program or document for specific letters, words or numbers. 
+* Sorting: Alphabetizes, organizes, puts strings or numbers into order. 
+
+6. What is a method? Why might a programmer choose to use a method?
+
+*Methods bundle statements, loops, etc. and produce a value. Variables within methods are only recognized within the method. A programmer may choose to use a method, because they have a variable they want to assign different values to for different sets of operations. Methods can also be nested into larger Methods, allowing a program to perform different sets of tasks, provided differnt conditions or user inputs. In that situation, a programmer would definitely want to use methods. 
+
+7. Define the following terms as they relate to a method. 
+
+* Return Value: Return value is the string, integer or boolean value that is returned as the output of the method. 
+
+*
