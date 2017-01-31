@@ -16,19 +16,29 @@ p "enhance".center(20)
 p "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
-p "the usual" + " suspects"
+a = "the usual"
 #=> "the usual suspects"
 
-p "the usual" + " suspects"
+a << " suspects"
 # => "the usual suspects"
+p a.concat(33)
 
-# "The case of the disappearing last letter".<???>
+p "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
+string = "The mystery of the missing first letter"
+string.slice!(0)
+p string
 # => "he mystery of the missing first letter"
 
 # "Elementary,    my   dear        Watson!".<???>
+# => "Elementary, my dear Watson!"
+
+string = "Elementary,    my   dear        Watson!"
+string.slice!(12..14)
+string.slice!(15..16)
+string.slice!(20..26)
+p string
 # => "Elementary, my dear Watson!"
 
 # "z".<???>
