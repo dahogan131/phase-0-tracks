@@ -40,10 +40,11 @@ string.slice!(15..16)
 string.slice!(20..26)
 p string
 # => "Elementary, my dear Watson!"
-
-# "z".<???>
+p "z".ord
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
-# "How many times does the letter 'a' appear in this string?".<???>
+# 122 is the integer ordinal for z. The integer ordinal represents the ordinal numeric place "in line" for the character. 
+
+p "How many times does the letter 'a' appear in this string?".count "a"
 # => 4
