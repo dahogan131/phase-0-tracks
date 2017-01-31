@@ -10,16 +10,16 @@ p "iNvEsTiGaTiOn".swapcase
 p "zom".insert(2, 'o')
 # => “zoom”
 
-# "enhance".<???>
+p "enhance".center(20)
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
+p "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+p "the usual" + " suspects"
 #=> "the usual suspects"
 
-# " suspects".<???>
+p "the usual" + " suspects"
 # => "the usual suspects"
 
 # "The case of the disappearing last letter".<???>
