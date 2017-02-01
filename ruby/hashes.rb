@@ -1,27 +1,71 @@
 # The value of the keys will be a variable that has a gets.chomp value. 
 # The answer variable to each question will be gets.chomp and that answer variable will be the value for the key in the hash.
 #For wallpaper and Ombre opinions, we are gonna want to use arrays. 
+#Needs to be able to loop. Thinking an if statement with another option for gets.chomp. 
 
 p "Hello! Thank you for using Bigfoot's Interior Decoration. We will need some infromation from your client's application."
 p "Please enter your client's name."
 client_name = gets.chomp
+p "Is #{client_name} correct? yes or no?"
+user_input = gets.chomp
+  if user_input == "no"
+  	p "Please enter your client's name."
+  	client_name = gets.chomp
+  end
 p "Please enter your client's address."
 client_address = gets.chomp
+p "Is #{client_address} correct? yes or no."
+user_input = gets.chomp
+  if user_input == "no" 
+  	p "Please enter your client's address."
+  	client_address = gets.chomp
+  end
 p "Please enter your client's email."
 client_email = gets.chomp
+p "Is #{client_email} correct? yes or no."
+  user_input = gets.chomp
+  if user_input == "no"
+  	p "Please enter your client's email."
+  	client_email = gets.chomp
+  end
 p "Please enter your client's phone number."
 client_number = gets.chomp
+p "Is #{client_number} correct? yes or no."
+  user_input = gets.chomp
+  if user_input == "no"
+  	p "Please enter your client's phone number."
+  	client_number = gets.chomp
+  end
 p "What is your client's listed favorite shade of blue?"
 client_blue = gets.chomp
-p "List client wallpaper preferences. Enter the number place of the pattern on the list (Paisley = 1, Chevrons = 2, etc"
+p "Is #{client_blue} correct? yes or no."
+  user_input = gets.chomp
+  if user_input == "no"
+  	p "What is your client's listed favorite shade of blue?"
+  	client_blue = gets.chomp
+  end
+p "List client wallpaper preference. Enter the number place of the pattern on the list (Paisley = 1, Chevrons = 2, etc"
 client_paper = ["Paisley", "Chevrons", "Photorealistic Woodsy Scenes With Squirrels", "Photorealistic Woodsy Scenes WithOUT Squirrels", "Abstract Woodsy Scenes"]
 index = gets.to_i - 1
 client_selection = client_paper[index]
-
-p "What is your client's opinion of Ombre? Enter the number place on the list."
+p "Is #{client_selection} correct? yes or no."
+  user_input = gets.chomp
+  if user_input == "no"
+  	p "List client wallpaper preference. Enter the number place of the pattern on the list (Paisley = 1, Chevrons = 2, etc"
+  	index = gets.to_i - 1
+    client_selection = client_paper[index]
+  end
+p "What is your client's opinion of Ombre? Enter their selection's number place on the list."
 client_ombre = ["Fierce", "So last season", "Practically medieval in its appalling irrelevance"]
 index2 = gets.to_i - 1 
 ombre_selection = client_ombre[index2]
+p "is #{client_ombre} correct? yes or no."
+  user_input = gets.chomp
+  if user_input == "no"
+  	p "What is your client's opinion of Ombre? Enter their selection's number place on the list."
+  	index2 = gets,to_i - 1
+  	ombre_selection = client_ombre[index2]
+  end
 client = {
 	:name => client_name,
 	:address => client_address,
