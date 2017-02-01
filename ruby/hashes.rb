@@ -44,26 +44,86 @@ p "Is #{client_blue} correct? yes or no."
   	p "What is your client's listed favorite shade of blue?"
   	client_blue = gets.chomp
   end
-p "List client wallpaper preference. Enter the number place of the pattern on the list (Paisley = 1, Chevrons = 2, etc"
-client_paper = ["Paisley", "Chevrons", "Photorealistic Woodsy Scenes With Squirrels", "Photorealistic Woodsy Scenes WithOUT Squirrels", "Abstract Woodsy Scenes"]
+p "List client wallpaper preference. Enter the number place of the pattern on the list (Paisley = 1, Chevrons = 2, etc)"
+client_paper = ["Paisley ", "Chevrons ", "Photorealistic Woodsy Scenes With Squirrels ", "Photorealistic Woodsy Scenes WithOUT Squirrels ", "Abstract Woodsy Scenes "]
 index = gets.to_i - 1
 client_selection = client_paper[index]
 p "Is #{client_selection} correct? yes or no."
   user_input = gets.chomp
   if user_input == "no"
-  	p "List client wallpaper preference. Enter the number place of the pattern on the list (Paisley = 1, Chevrons = 2, etc"
+  	p "List client wallpaper preference. Enter the number place of the pattern on the list (Paisley = 1, Chevrons = 2, etc)"
   	index = gets.to_i - 1
     client_selection = client_paper[index]
   end
+p "Did your client have more than one wallpaper preference? yes or no."
+  user_input = gets.chomp
+  if user_input == "yes"
+  	p "Please enter your client's other wallpaper prefernce. Enter the number place of of the pattern on the list (Paisley = 1, Chevrons = 2, etc)"
+    client_paper2 = ["Paisley ", "Chevrons ", "Photorealistic Woodsy Scenes With Squirrels ", "Photorealistic Woodsy Scenes WithOUT Squirrels ", "Abstract Woodsy Scenes "]
+	index = gets.to_i - 1
+	client_selection2 = client_paper2[index]
+	p "Is #{client_selection2} correct? yes or no."
+	  user_input = gets.chomp
+	  if user_input == "no"
+	  	p "List client wallpaper preference. Enter the number place of the pattern on the list (Paisley = 1, Chevrons = 2, etc"
+	  	index = gets.to_i - 1
+	    client_selection2 = client_paper2[index]
+	  end
+  end
+ p "Any other client wallpaper preferences? yes or no."
+ user_input = gets.chomp
+  if user_input == "yes"
+  	p "Please enter your client's other wallpaper prefernce. Enter the number place of of the pattern on the list (Paisley = 1, Chevrons = 2, etc)"
+    client_paper3 = ["Paisley ", "Chevrons ", "Photorealistic Woodsy Scenes With Squirrels ", "Photorealistic Woodsy Scenes WithOUT Squirrels ", "Abstract Woodsy Scenes "]
+	index = gets.to_i - 1
+	client_selection3 = client_paper3[index]
+	p "Is #{client_selection3} correct? yes or no."
+	  user_input = gets.chomp
+	  if user_input == "no"
+	  	p "List client wallpaper preference. Enter the number place of the pattern on the list (Paisley = 1, Chevrons = 2, etc"
+	  	index = gets.to_i - 1
+	    client_selection3 = client_paper3[index]
+	  end
+  end
+  p "Any other client wallpaper preferences? yes or no."
+ user_input = gets.chomp
+  if user_input == "yes"
+  	p "Please enter your client's other wallpaper prefernce. Enter the number place of of the pattern on the list (Paisley = 1, Chevrons = 2, etc)"
+    client_paper4 = ["Paisley ", "Chevrons ", "Photorealistic Woodsy Scenes With Squirrels ", "Photorealistic Woodsy Scenes WithOUT Squirrels ", "Abstract Woodsy Scenes "]
+	index = gets.to_i - 1
+	client_selection4 = client_paper4[index]
+	p "Is #{client_selection4} correct? yes or no."
+	  user_input = gets.chomp
+	  if user_input == "no"
+	  	p "List client wallpaper preference. Enter the number place of the pattern on the list (Paisley = 1, Chevrons = 2, etc"
+	  	index = gets.to_i - 1
+	    client_selection4 = client_paper4[index]
+	  end
+  end
+  p "Any other client wallpaper preferences? yes or no."
+ user_input = gets.chomp
+  if user_input == "yes"
+  	p "Please enter your client's other wallpaper prefernce. Enter the number place of of the pattern on the list (Paisley = 1, Chevrons = 2, etc)"
+    client_paper5 = ["Paisley ", "Chevrons ", "Photorealistic Woodsy Scenes With Squirrels ", "Photorealistic Woodsy Scenes WithOUT Squirrels ", "Abstract Woodsy Scenes "]
+	index = gets.to_i - 1
+	client_selection5 = client_paper5[index]
+	p "Is #{client_selection5} correct? yes or no."
+	  user_input = gets.chomp
+	  if user_input == "no"
+	  	p "List client wallpaper preference. Enter the number place of the pattern on the list (Paisley = 1, Chevrons = 2, etc"
+	  	index = gets.to_i - 1
+	    client_selection5 = client_paper5[index]
+	  end
+  end
 p "What is your client's opinion of Ombre? Enter their selection's number place on the list."
 client_ombre = ["Fierce", "So last season", "Practically medieval in its appalling irrelevance"]
-index2 = gets.to_i - 1 
-ombre_selection = client_ombre[index2]
-p "is #{client_ombre} correct? yes or no."
+index = gets.to_i - 1 
+ombre_selection = client_ombre[index]
+p "is #{ombre_selection} correct? yes or no."
   user_input = gets.chomp
   if user_input == "no"
   	p "What is your client's opinion of Ombre? Enter their selection's number place on the list."
-  	index2 = gets,to_i - 1
+  	index2 = gets.to_i - 1
   	ombre_selection = client_ombre[index2]
   end
 client = {
@@ -72,7 +132,7 @@ client = {
 	:email => client_email,
 	:number => client_number,
 	:blue => client_blue,
-	:paper => client_selection,
+	:paper => client_selection + client_selection2 + client_selection3 + client_selection4 + client_selection5,
 	:ombre => ombre_selection
 }
 
