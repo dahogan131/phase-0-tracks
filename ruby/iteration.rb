@@ -27,11 +27,29 @@ cities.each {|x| p "Welcome to #{x}"}
 city_hash.each {|x| p "Thank you for visiting #{x}"}
 puts cities.map! {|x| x + " Municipality"}
 
-numbers = [2, 5, 12, 17]
-puts numbers.delete_if {|num| num > 6}
+ numbers = [2, 5, 12, 17]
+ puts numbers.delete_if {|num| num > 6}
+
+# numbers_hash = {
+# 	:no_gas => numbers[0],
+# 	:no_hybrid => numbers[1],
+# 	:no_plugin => numbers[2],
+# 	:no_electric => numbers[3]
+# }
+# puts numbers_hash.delete_if {|num| num > 6}
 
 colors = ["blue", "purple", "green", "yellow", "red"]
 puts colors.keep_if {|c| c =~ /[bl]/ }
+
+col = {
+	"sky" => colors[0],
+	"barney" => colors[1],
+	"grass" => colors[2],
+	"sun" => colors[3],
+	"stoplight" => colors[4]
+}
+#it gives me funny business because it's analyzing the properties of the key, not the value. Need to get it to focus on the value of the key.
+puts col.keep_if {|k,v| k =~ /[r]/}
 
 numbers = [2, 5, 12, 17]
 puts numbers.select {|num| num.even?}
