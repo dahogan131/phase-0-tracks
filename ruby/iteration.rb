@@ -26,3 +26,15 @@ p city_hash[:hottest_city]
 cities.each {|x| p "Welcome to #{x}"}
 city_hash.each {|x| p "Thank you for visiting #{x}"}
 puts cities.map! {|x| x + " Municipality"}
+
+numbers = [2, 5, 12, 17]
+puts numbers.delete_if {|num| num > 6}
+
+colors = ["blue", "purple", "green", "yellow", "red"]
+puts colors.keep_if {|c| c =~ /[bl]/ }
+
+numbers = [2, 5, 12, 17]
+puts numbers.select {|num| num.even?}
+
+
+
