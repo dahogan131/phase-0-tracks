@@ -36,5 +36,15 @@ puts colors.keep_if {|c| c =~ /[bl]/ }
 numbers = [2, 5, 12, 17]
 puts numbers.select {|num| num.even?}
 
+array = [0, 2, 4, 6, 8]
+p array.length
 
-
+# Method that removes items from array until array only has 2 items in index.
+#thinking while statement
+def rm_index
+	array = [0, 2, 4, 6, 8]
+	while array.length > 2
+		puts array.pop
+	end
+end
+puts rm_index
