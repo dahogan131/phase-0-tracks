@@ -33,3 +33,8 @@ puts numbers.delete_if {|num| num > 6}
 colors = ["blue", "purple", "green", "yellow", "red"]
 puts colors.keep_if {|c| c =~ /[bl]/ }
 
+numbers = [2, 5, 12, 17]
+puts numbers.select {|num| num.even?}
+
+
+
