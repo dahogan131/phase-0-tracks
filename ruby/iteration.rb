@@ -30,6 +30,15 @@ puts cities.map! {|x| x + " Municipality"}
  numbers = [2, 5, 12, 17]
  puts numbers.delete_if {|num| num > 6}
 
+ energy_type = {
+ 	'home electric' => 'solar',
+ 	'hot tub' => 'geothermal',
+ 	'shower' => 'natural gas',
+ 	'car' => 'petrol',
+ 	'barn heating' => 'coal'
+ }
+ puts energy_type.delete_if {|k,v| v =~ (/coal/)}
+
 # numbers_hash = {
 # 	:no_gas => numbers[0],
 # 	:no_hybrid => numbers[1],
@@ -41,18 +50,36 @@ puts cities.map! {|x| x + " Municipality"}
 colors = ["blue", "purple", "green", "yellow", "red"]
 puts colors.keep_if {|c| c =~ /[bl]/ }
 
-col = {
-	"sky" => colors[0],
-	"barney" => colors[1],
-	"grass" => colors[2],
-	"sun" => colors[3],
-	"stoplight" => colors[4]
-}
-#it gives me funny business because it's analyzing the properties of the key, not the value. Need to get it to focus on the value of the key.
-puts col.keep_if {|k,v| k =~ /[r]/}
+ col = {
+ 	"sky" => "blue",
+ 	"barney" => "purple",
+ 	"grass" => "green",
+ 	"sun" => "yellow",
+ 	"stoplight" => "red"
+ }
+puts col.keep_if {|k,v| v =~ /[r]/}
+
+# col = {
+# 	"sky" => colors[0],
+# 	"barney" => colors[1],
+# 	"grass" => colors[2],
+# 	"sun" => colors[3],
+# 	"stoplight" => colors[4]
+# }
+# #it gives me funny business because it's analyzing the properties of the key, not the value. Need to get it to focus on the value of the key.
+# puts col.keep_if {|k,v| v =~ /[red]/}
 
 numbers = [2, 5, 12, 17]
 puts numbers.select {|num| num.even?}
+
+age = {
+	'Oscar' => 45,
+	'Charlie' => 32,
+	'Lia' => 25,
+	'Diana' => 28,
+	'Harley' => 38
+}
+puts age.select {|k,v| v.even?}
 
 array = [0, 2, 4, 6, 8]
 p array.length
