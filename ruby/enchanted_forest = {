@@ -1,5 +1,18 @@
 enchanted_forest = {
-	'Keebler Treehouse' => ['Tuck', 'Elmer', 'Zack'],
-	'Smurf Village' => ['Papa Smurf', 'Smurfette', 'Brainy Smurf'],
-	'Troll House' => ['Big Troll', 'Happy Troll', 'Garden Troll', 'Internet Troll']
+	keebler: {
+		village: 'Keebler Treehouse', 
+		inhabitants: ['Tuck', 'Elmer', 'Zack']
+		}
+	smurf: {
+		village: 'Smurf Village', 
+		inhabitants: => ['Papa Smurf', 'Smurfette', 'Brainy Smurf']
+		}
+	troll: {	
+		village: 'Troll House', 
+		inhabitants: => ['Big Troll', 'Happy Troll', 'Garden Troll', 'Internet Troll']
+		}
 }
+
+p enchanted_forest[:keebler][inhabitants][0]
+p enchanted_forest[:keebler][inhabitants][1]
+p enchanted_forest[:keebler][inhabitants][2]
