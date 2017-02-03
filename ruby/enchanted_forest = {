@@ -1,0 +1,5 @@
+enchanted_forest = {
+	'Keebler Treehouse' => ['Tuck', 'Elmer', 'Zack'],
+	'Smurf Village' => ['Papa Smurf', 'Smurfette', 'Brainy Smurf'],
+	'Troll House' => ['Big Troll', 'Happy Troll', 'Garden Troll', 'Internet Troll']
+}
