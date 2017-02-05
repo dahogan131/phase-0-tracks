@@ -2,8 +2,10 @@
 #method that puts variables into array form and then pushes the string values into each other. 
 #can use if/else conditional to switch vowels and consonants. Thinking similar model as the week 4 encrypt model
 
-first_name = "lia"
-last_name = "hogan"
+full_name = ["Lia", "Hogan"]
+first_name = full_name[0]
+last_name = full_name[1]
+
 
 # swapped_first = ""
 # swapped_last = ""
