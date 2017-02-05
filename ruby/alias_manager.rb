@@ -36,7 +36,7 @@ def alias_name(first_name, last_name)
     last_name.delete_at(0)
     p "compacted last name: #{last_name.compact}"
   
-  full_name = first_name + last_name
+  full_name = first_name.compact + last_name.compact
   index = 0 
   forward_letter = ""
   # comp_for_letter = forward_letter.compact
@@ -53,7 +53,7 @@ def alias_name(first_name, last_name)
     elsif full_name[index] == "e" 
       forward_letter[index] = "i"
     elsif full_name[index] == "f" 
-     forward_letter[index] = "g"
+      forward_letter[index] = "g"
     elsif full_name[index] == "g" 
       forward_letter[index] = "h"
     elsif full_name[index] == "h" 
