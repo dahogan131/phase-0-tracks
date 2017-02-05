@@ -1,2 +1,10 @@
 1. Why are data structures useful in programming?
-* 
+* Data structures organize data and allow us to access large sets of data and apply it to our program. Data structures allow us to also organize string and integer values properly. Test scores, for example, can be organized by student and section of the test. If the scores were just kept as a group of numbers, it would not tell us anything. 
+
+2. Define "array" and describe the characteristics of an array.
+* An array is a collected set of elements. The elements are numbered starting at 0 and represent a set of data. Unlike a hash, which can represent multiple sets of data, an array is a single set of data. 
+
+3. Give two original examples of data sets that an array might be well-suited for.
+*The number of colors represented in a painting. Since the painting is a singular object that contains multiple elements (colors), an array would make sense. 
+
+*Number of strokes on Oscar's golf games. Oscar is a singular individual (typically because he plays too much golf), and his games each have their own number of strokes. 
