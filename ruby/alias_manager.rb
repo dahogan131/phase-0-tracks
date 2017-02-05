@@ -1,3 +1,112 @@
+def alias_name(first_name, last_name)
+  first_name = "lia".chars
+  last_name = "hogan".chars
+  p first_name.class
+  p "first name: #{first_name}"
+  index = 0
+  while index < last_name.length 
+    first_name[index + first_name.length] = last_name[index]
+    # first_name[4] = last_name[1]
+    # first_name[5] = last_name[2]
+    # first_name[6] = last_name[3]
+    # first_name[7] = last_name[4]
+    index +=1 
+  end
+   first_name.compact
+   p "compacted first name: #{first_name.compact}"
+   p "last name: #{last_name}"
+  index = 0
+  while last_name.length < first_name.length 
+    last_name[index + last_name.length] = first_name[index]
+    # last_name[6] = first_name[1]
+    # last_name[7] = first_name[2]
+    # p last_name
+    index +=1 
+  end
+    last_name.compact
+    p "compacted last name: #{last_name.compact}"
+    first_name.delete_at(0)
+    first_name.delete_at(0)
+    first_name.delete_at(0)
+    p "compacted first name: #{first_name.compact}"
+    last_name.delete_at(0)
+    last_name.delete_at(0)
+    last_name.delete_at(0)
+    last_name.delete_at(0)
+    last_name.delete_at(0)
+    p "compacted last name: #{last_name.compact}"
+  
+  full_name = first_name + last_name
+  index = 0 
+  forward_letter = ""
+  # comp_for_letter = forward_letter.compact
+  while index < full_name.length
+    forward_letter[index]
+    if full_name[index] == "a"
+      forward_letter[index] = "e"
+    elsif full_name[index] == "b" 
+      forward_letter[index] = "c"
+    elsif full_name[index] == "c" 
+      forward_letter[index] = "d" 
+    elsif full_name[index] == "d" 
+      forward_letter[index] = "f"
+    elsif full_name[index] == "e" 
+      forward_letter[index] = "i"
+    elsif full_name[index] == "f" 
+     forward_letter[index] = "g"
+    elsif full_name[index] == "g" 
+      forward_letter[index] = "h"
+    elsif full_name[index] == "h" 
+      forward_letter[index] = "j"
+    elsif full_name[index] == "i" 
+      forward_letter[index] = "o"
+    elsif full_name[index] == "j" 
+      forward_letter[index] = "k"
+    elsif full_name[index] == "k" 
+      forward_letter[index] = "l"
+    elsif full_name[index] == "l" 
+      forward_letter[index] = "m"
+    elsif full_name[index] == "m" 
+      forward_letter[index] = "n"
+    elsif full_name[index] == "n" 
+      forward_letter[index] = "p"
+    elsif full_name[index] == "o" 
+      forward_letter[index] = "u"
+    elsif full_name[index] == "p" 
+      forward_letter[index] = "q"
+    elsif full_name[index] == "q" 
+      forward_letter[index] = "r"
+    elsif full_name[index] == "r" 
+      forward_letter[index] = "s"
+    elsif full_name[index] == "s" 
+      forward_letter[index] = "t"
+    elsif full_name[index] == "t" 
+      forward_letter[index] = "v"
+    elsif full_name[index] == "u" 
+      forward_letter[index] = "y"
+    elsif full_name[index] == "v" 
+      forward_letter[index] = "w"
+    elsif full_name[index] == "w" 
+      forward_letter[index] = "x"
+    elsif full_name[index] == "x" 
+      forward_letter[index] = "z"
+    elsif full_name[index] == "y" 
+      forward_letter[index] = "a"
+    elsif full_name[index] == "z" 
+      forward_letter[index] = "b"
+    else 
+      forward_letter[index] = " "
+    end
+    index += 1 
+  end
+  p full_name.class
+  forward_letter
+end
+
+puts alias_name("lia", "hogan")
+
+#===========================================
+
 #first name and last name are variables who switch values.
 #method that puts variables into array form and then pushes the string values into each other. 
 #can use if/else conditional to switch vowels and consonants. Thinking similar model as the week 4 encrypt model
