@@ -34,4 +34,4 @@ l
 s
 e
 y
-This is because x is the block parameter
+This is because x is the block parameter and the .chars method breaks up the "palsey" string into individual characters. Therefore, the value of the block parameter is dependent on the method called. It's also dependent on the fact that I think Palsey is fabulous, but that's something else. 
