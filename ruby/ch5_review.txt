@@ -1,0 +1,37 @@
+1. Why are data structures useful in programming?
+* Data structures organize data and allow us to access large sets of data and apply it to our program. Data structures allow us to also organize string and integer values properly. Test scores, for example, can be organized by student and section of the test. If the scores were just kept as a group of numbers, it would not tell us anything. 
+
+2. Define "array" and describe the characteristics of an array.
+* An array is a collected set of elements. The elements are numbered starting at 0 and represent a set of data. Unlike a hash, which can represent multiple sets of data, an array is a single set of data. 
+
+3. Give two original examples of data sets that an array might be well-suited for.
+*The number of colors represented in a painting. Since the painting is a singular object that contains multiple elements (colors), an array would make sense. 
+
+*Number of strokes on Oscar's golf games. Oscar is a singular individual (typically because he plays too much golf), and his games each have their own number of strokes. Oscar's foolish obsession with the game represents a single set of data with multiple integer values, and would be best represented in an Array. 
+
+4. Define "hash" and describe the characteristics of a hash.
+*A hash is a data structure that hosts multiple sets of data. Keys are used in hashes to map the sets of values within the hash. Since there are multiple data sets within the hash, the keys are important in identifying which set of values are actually being referred to in a method call. 
+
+5. Give two original examples of data sets that a hash might be well-suited for.
+*Weather reports would be best represented in a hash. Multiple-day forecasts could be represented in array form, but then you have values for precipitation, temperature and humidity, which are better represented in separate sets of data. Keys can be used to direct to multi-day predictions for precipitation, humidity or temperature. 
+
+*Sports statistics for individual baseball players would best be represented in a hash. This is because each player has their own set of statistics and there are multiple statistics recorded for each player. I typically hate sports, so I only know about Earned Run Average and Batting Average. Regardless, since there are multiple players on a team, a hash would make sense, in terms of directing to an individual's game averages. 
+
+6. Why is iteration useful?
+*Iteration allows us to perform the same line of code on each element. This would come in handy if we did not want to write the same line of code for each individual item, but we wanted the code to apply to all items in a data set.  
+
+7. Give an example of a real-life task that would require iteration if you wrote an algorithm for it.
+*I need to write a program that greets each student by their name and recites their test score from Monday's quiz. 
+
+8. What is a block?
+*A block is similar to a method. It is a code that is only applicable within its borders. Unlike methods, blocks are unnamed, while their parameters are between "pipes," rather than parenthesis. It looks like blocks are isolated programs that are used when referring to data structures like hashes or arrays. 
+
+9. What is a block parameter, and where does its value come from? 
+*The value of the block parameter comes from the method that is being called. "palsey".chars {|x| puts "#{x}"} will return:
+p
+a
+l
+s
+e
+y
+This is because x is the block parameter and the .chars method breaks up the "palsey" string into individual characters. Therefore, the value of the block parameter is dependent on the method called. It's also dependent on the fact that I think Palsey is fabulous, but that's something else. 

@@ -24,6 +24,9 @@ def alias_name(first_name, last_name)
     index +=1 
   end
     last_name.compact
+
+    #A better alternative may be to convert array into 2 strings in an array.
+    # ["l", "i", "a", "h", "o", "g", "a", "n"] --> ["lia", "hogan"]
     p "compacted last name: #{last_name.compact}"
     first_name.delete_at(0)
     first_name.delete_at(0)
