@@ -20,6 +20,10 @@
 # p initialize
 # Santa = Class.new do
 class Santa
+
+	def initialize
+		p "initializing"
+	end
 	def speak
 		p "Ho Ho Ho! Happy Hannukah!"
 	end
@@ -32,10 +36,37 @@ class Santa
 		p "Initializing Santa sequence... "
 	end
 	# p initialize
+
 end
 a = Santa.new
+# initialize
 a.eat_milk_and_cookies("cookie")
 a.initializing
 a.speak
 # a.speak
 # a.initialize
+
+
+# def speak(integer, bark)
+# 	puts integer * bark
+# end
+
+# puts speak(7, "woof")
+class Class
+	def method
+		p "okay b"
+	end
+# index = 0
+# until index == 50
+# 	p method
+# 	index = index + 1
+# end
+method
+end
+
+b = Class.new
+index = 0
+until index == 50
+	p b
+	index = index + 1
+end
