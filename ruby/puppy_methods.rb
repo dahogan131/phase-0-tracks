@@ -96,6 +96,7 @@ class Class
 	}
 
 	p data_hash
+	data_hash.each {|k,v| puts "#{k} is #{v}"}
 end
 
 # b = Class.new
