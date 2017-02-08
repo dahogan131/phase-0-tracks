@@ -8,6 +8,55 @@ class Puppy
 end
 
 
+class Class
+	b = Class.new
+
+	arr_init = Array.new
+	arr_init = []
+
+	arr_m1 = Array.new
+	arr_m1 = []
+
+	arr_m2 = Array.new
+	arr_m2 = []
+	index = 0
+	until index == 50
+		def initialize
+			#p "Initializing class sequence..."
+		end
+
+		def method1
+			#p "This is method 1"
+			7
+		end
+
+		def method2
+			#p "This is method 2"
+		end
+		arr_init << initialize
+		arr_m1 << b.method1
+		arr_m2 << b.method2
+		data_hash = {
+		:initial => arr_init,
+		 :method_1 => arr_m1,
+		 :method_2 => arr_m2
+	}
+	
+	 data_hash.each do 
+	  p "#{index} * #{Class.method1} ="
+	  p index * method1
+	  initialize
+	  p Class.method1
+	  p Class.method2
+	 end
+	 
+		index = index + 1
+	end
+
+end
+
+
+
 # class Class
 # 	def initialize
 # 		p "Initializing class sequence..."
@@ -95,8 +144,19 @@ class Class
 		:method_2 => arr_m2
 	}
 
-	p data_hash
-	data_hash.each {|k,v| puts "#{k} is #{v}"}
+	# p data_hash
+	# data_hash.each do |hash|
+	# 	puts "#{hash} is an #{index}"
+	# end
+	data_hash[:initial].each do |structure|
+		puts "#{structure} is #{index}"
+	end
+	data_hash[:method_1].each do |structure|
+		puts "#{structure} is #{index}"
+	end
+	data_hash[:method_2].each do |structure|
+		puts "#{structure} is #{index}"
+	end
 end
 
 # b = Class.new
