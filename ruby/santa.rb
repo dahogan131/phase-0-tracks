@@ -21,28 +21,43 @@
 # Santa = Class.new do
 class Santa
 
-	def initialize
-		p "initializing"
+	def initialize(name)
+		@name = name
+		@cookie = "Milano"
+		p "Initializing Santa Sequence, #{@cookie}..."
 	end
 	def speak
-		p "Ho Ho Ho! Happy Hannukah!"
+		p "Ho Ho Ho! Happy Hannukah #{@name}!"
 	end
 	# p speak
 	def eat_milk_and_cookies(cookie)
 		p "Oh man, friggin' loved that #{cookie}!"
+		@cookie = cookie
 	end
 	# p eat_milk_and_cookies("gingersnap")
-	def initializing
-		p "Initializing Santa sequence... "
-	end
+	# def initializing
+	# 	p "Initializing Santa sequence... "
+	# end
 	# p initialize
 
 end
-a = Santa.new
-# initialize
-a.eat_milk_and_cookies("cookie")
-a.initializing
-a.speak
+
+santa = Santa.new("Kremit")
+santa.eat_milk_and_cookies("gingersnap")
+santa.speak
+
+santa = Santa.new("Lenny")
+santa.eat_milk_and_cookies("sugar cookie")
+santa.speak
+
+santa = Santa.new("Wu Tang")
+santa.eat_milk_and_cookies("snickerdoodle")
+santa.speak
+
+santa = Santa.new("Boo Thang")
+santa.eat_milk_and_cookies("goatmeal craisin (yuk)")
+santa.speak
+
 # a.speak
 # a.initialize
 
@@ -52,26 +67,26 @@ a.speak
 # end
 
 # puts speak(7, "woof")
-class Class
-	def method
-		p "okay b"
-	end
+# class Class
+# 	def method
+# 		p "okay b"
+# 	end
+# # index = 0
+# # until index == 50
+# # 	p method
+# # 	index = index + 1
+# # end
+# method
+# end
+
+# b = Class.new
+# #Declare new hash
+# #Hash needs keys for each of the methods: Initialize and 2 instance methods
 # index = 0
 # until index == 50
-# 	p method
+# 	p b
+# 	#Push the instance of the class into the hash
+# 	#Somehow make it so that the methods go into their respective keys
+
 # 	index = index + 1
 # end
-method
-end
-
-b = Class.new
-#Declare new hash
-#Hash needs keys for each of the methods: Initialize and 2 instance methods
-index = 0
-until index == 50
-	p b
-	#Push the instance of the class into the hash
-	#Somehow make it so that the methods go into their respective keys
-
-	index = index + 1
-end
