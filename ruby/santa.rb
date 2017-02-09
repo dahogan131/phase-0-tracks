@@ -51,14 +51,23 @@ end
  santas << Santa.new("Agender", "Inupiat")
  santas << Santa.new("Bigender", "Korean")
 
-p santas
+ p santas
+
+# Santa sequence keeps recurring. Somehow need to make that not happen. 
 
 santas2 = []
 ex_gen = ["Male", "Gender Fluid", "Agender", "Bigender"]
 ex_eth = ["Dinka", "Romansh", "Inupiat", "Korean"]
 
 ex_gen.length.times do |i|
+	p i
 	santas2 << Santa.new(ex_gen[i], ex_eth[i])
+	until i == 2
+		p santas2
+		p "incomplete index"
+		
+
+		
 end
 
 p santas2
