@@ -23,8 +23,11 @@ class Santa
 
 	def initialize(name)
 		@name = name
-		@cookie = "Milano"
-		p "Initializing Santa Sequence, #{@cookie}..."
+		p "Initializing Santa Sequence, #{@name}..."
+	end
+	def gender(gender)
+		@gender = gender
+		p "#{@name} is #{@gender}."
 	end
 	def speak
 		p "Ho Ho Ho! Happy Hannukah #{@name}!"
@@ -43,18 +46,22 @@ class Santa
 end
 
 santa = Santa.new("Kremit")
+santa.gender("Male")
 santa.eat_milk_and_cookies("gingersnap")
 santa.speak
 
-santa = Santa.new("Lenny")
+santa = Santa.new("Lia")
+santa.gender("Gender Fluid")
 santa.eat_milk_and_cookies("sugar cookie")
 santa.speak
 
 santa = Santa.new("Wu Tang")
+santa.gender("Agender")
 santa.eat_milk_and_cookies("snickerdoodle")
 santa.speak
 
 santa = Santa.new("Boo Thang")
+santa.gender("Bigender")
 santa.eat_milk_and_cookies("goatmeal craisin (yuk)")
 santa.speak
 
