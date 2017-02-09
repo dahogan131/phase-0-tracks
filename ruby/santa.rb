@@ -45,13 +45,23 @@ class Santa
 
 end
 
-santas = []
-santas << Santa.new("Male", "Dinka")
-santas << Santa.new("Gender Fluid", "Romansh")
-santas << Santa.new("Agender", "Inupiat")
-santas << Santa.new("Bigender", "Korean")
+ santas = []
+ santas << Santa.new("Male", "Dinka")
+ santas << Santa.new("Gender Fluid", "Romansh")
+ santas << Santa.new("Agender", "Inupiat")
+ santas << Santa.new("Bigender", "Korean")
 
 p santas
+
+santas2 = []
+ex_gen = ["Male", "Gender Fluid", "Agender", "Bigender"]
+ex_eth = ["Dinka", "Romansh", "Inupiat", "Korean"]
+
+ex_gen.length.times do |i|
+	santas2 << Santa.new(ex_gen[i], ex_eth[i])
+end
+
+p santas2
 
 
 # santa = Santa.new("Male", "Dinka")
