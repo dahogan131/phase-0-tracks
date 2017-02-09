@@ -27,9 +27,6 @@ class Santa
 		@ethnicity = ethnicity
 		p "Initializing Santa Sequence, #{@name}..."
 	end
-	def gender
-		p "#{@gender} and #{@ethnicity}."
-	end
 	def speak
 		p "Ho Ho Ho! Happy Hannukah!"
 	end
@@ -37,12 +34,14 @@ class Santa
 		p "Oh man, friggin' loved that #{cookie}!"
 		@cookie = cookie
 	end
-	# p eat_milk_and_cookies("gingersnap")
-	# def initializing
-	# 	p "Initializing Santa sequence... "
-	# end
-	# p initialize
-
+# Establishing Getter Method for Attribute
+	def gender
+	 	@gender
+	end
+#Establishing Setter Method
+	def new_gender=(new_gender)
+		@gender = new_gender
+	end
 end
 
  santas = []
