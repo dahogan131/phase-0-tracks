@@ -39,10 +39,15 @@ class Santa
 	 	@gender
 	end
 #Establishing Setter Method
-	def new_gender=(new_gender)
+	def gender=(new_gender)
 		@gender = new_gender
 	end
 end
+
+santa = Santa.new("Female", "Laplander")
+p santa
+santa.gender= "Gender Neutral"
+puts "#{santa.gender}"
 
  santas = []
  santas << Santa.new("Male", "Dinka")
