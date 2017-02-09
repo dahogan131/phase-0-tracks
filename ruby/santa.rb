@@ -62,12 +62,8 @@ ex_eth = ["Dinka", "Romansh", "Inupiat", "Korean"]
 ex_gen.length.times do |i|
 	p i
 	santas2 << Santa.new(ex_gen[i], ex_eth[i])
-	until i == 2
-		p santas2
-		p "incomplete index"
-		
-
-		
+	p santas2
+	p "incomplete index"
 end
 
 p santas2
