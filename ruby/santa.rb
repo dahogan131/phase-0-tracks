@@ -20,20 +20,19 @@
 # p initialize
 # Santa = Class.new do
 class Santa
-
-	def initialize(name, gender, ethnicity)
-		@name = name
+	reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Donner", "Blitzen"]
+	age = 0
+	def initialize(gender, ethnicity)
 		@gender = gender
 		@ethnicity = ethnicity
 		p "Initializing Santa Sequence, #{@name}..."
 	end
 	def gender
-		p "#{@name} is #{@gender} and #{@ethnicity}."
+		p "#{@gender} and #{@ethnicity}."
 	end
 	def speak
-		p "Ho Ho Ho! Happy Hannukah #{@name}!"
+		p "Ho Ho Ho! Happy Hannukah!"
 	end
-	# p speak
 	def eat_milk_and_cookies(cookie)
 		p "Oh man, friggin' loved that #{cookie}!"
 		@cookie = cookie
@@ -46,25 +45,34 @@ class Santa
 
 end
 
-santa = Santa.new("Kremit", "Male", "Dinka")
-santa.gender
-santa.eat_milk_and_cookies("gingersnap")
-santa.speak
+santas = []
+santas << Santa.new("Male", "Dinka")
+santas << Santa.new("Gender Fluid", "Romansh")
+santas << Santa.new("Agender", "Inupiat")
+santas << Santa.new("Bigender", "Korean")
 
-santa = Santa.new("Lia", "Gender Fluid", "Romansh")
-santa.gender
-santa.eat_milk_and_cookies("sugar cookie")
-santa.speak
+p santas
 
-santa = Santa.new("Wu Tang", "Agender", "Inupiat")
-santa.gender
-santa.eat_milk_and_cookies("snickerdoodle")
-santa.speak
 
-santa = Santa.new("Boo Thang", "Bigender", "Korean")
-santa.gender
-santa.eat_milk_and_cookies("goatmeal craisin (yuk)")
-santa.speak
+# santa = Santa.new("Male", "Dinka")
+# santa.gender
+# santa.eat_milk_and_cookies("gingersnap")
+# santa.speak
+
+# santa = Santa.new("Gender Fluid", "Romansh")
+# santa.gender
+# santa.eat_milk_and_cookies("sugar cookie")
+# santa.speak
+
+# santa = Santa.new("Agender", "Inupiat")
+# santa.gender
+# santa.eat_milk_and_cookies("snickerdoodle")
+# santa.speak
+
+# santa = Santa.new("Bigender", "Korean")
+# santa.gender
+# santa.eat_milk_and_cookies("goatmeal craisin (yuk)")
+# santa.speak
 
 # a.speak
 # a.initialize
