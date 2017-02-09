@@ -21,13 +21,14 @@
 # Santa = Class.new do
 class Santa
 
-	def initialize(name)
+	def initialize(name, gender, ethnicity)
 		@name = name
+		@gender = gender
+		@ethnicity = ethnicity
 		p "Initializing Santa Sequence, #{@name}..."
 	end
-	def gender(gender)
-		@gender = gender
-		p "#{@name} is #{@gender}."
+	def gender
+		p "#{@name} is #{@gender} and #{@ethnicity}."
 	end
 	def speak
 		p "Ho Ho Ho! Happy Hannukah #{@name}!"
@@ -45,23 +46,23 @@ class Santa
 
 end
 
-santa = Santa.new("Kremit")
-santa.gender("Male")
+santa = Santa.new("Kremit", "Male", "Dinka")
+santa.gender
 santa.eat_milk_and_cookies("gingersnap")
 santa.speak
 
-santa = Santa.new("Lia")
-santa.gender("Gender Fluid")
+santa = Santa.new("Lia", "Gender Fluid", "Romansh")
+santa.gender
 santa.eat_milk_and_cookies("sugar cookie")
 santa.speak
 
-santa = Santa.new("Wu Tang")
-santa.gender("Agender")
+santa = Santa.new("Wu Tang", "Agender", "Inupiat")
+santa.gender
 santa.eat_milk_and_cookies("snickerdoodle")
 santa.speak
 
-santa = Santa.new("Boo Thang")
-santa.gender("Bigender")
+santa = Santa.new("Boo Thang", "Bigender", "Korean")
+santa.gender
 santa.eat_milk_and_cookies("goatmeal craisin (yuk)")
 santa.speak
 
