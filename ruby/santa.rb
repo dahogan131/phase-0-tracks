@@ -19,6 +19,27 @@
 # p eat_milk_and_cookies("gingersnap")
 # p initialize
 # Santa = Class.new do
+class Santas
+	attr_reader :gender, :ethnicity
+	attr_accessor :gender, :ethnicity
+	def different_santas(gender = ["Bigender", "Gender Fluid", "Male", "Two Spirit", "Female", "Gender Neutral"], ethnicity = ["Laplander", "Yupik", "Samoan", "Hutu", "Korean", "Fijian"])
+		@gender = gender
+		@ethnicity = ethnicity
+		p gender
+		p ethnicity
+			# santa_gen_eth = []
+			# gender.each do |i|
+			# p i
+			# santa_gen_eth << different_santas(gender[i], ethnicity[i])
+			# p santa_gen_eth
+			# end
+	end
+end
+
+santas = Santas.new
+p santas
+p santas.different_santas
+
 class Santa
 	attr_reader :gender, :ethnicity, :age
 	attr_accessor :gender, :ethnicity, :age
