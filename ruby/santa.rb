@@ -61,6 +61,12 @@ class Santa
 	def gender=(new_gender)
 		@gender = new_gender
 	end
+	def age=(new_age)
+		@age = new_age
+	end
+	def ethnicity=(new_ethnicity)
+		@ethnicity = new_ethnicity
+	end
 end
 
 santa = Santa.new("Female", "Laplander")
@@ -68,6 +74,8 @@ p santa.age
 p santa.ethnicity
 p santa.get_mad_at
 santa.gender= "Gender Neutral"
+santa.ethnicity= "Hutu"
+santa.age= 25
 puts "#{santa.gender}"
 p santa
 p santa.celebrate_birthday
