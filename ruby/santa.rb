@@ -51,6 +51,12 @@ class Santa
 	def gender
 	  	@gender
 	end
+	def age
+		@age
+	end
+	def ethnicity
+		@ethnicity
+	end
 #Establishing Setter Method
 	def gender=(new_gender)
 		@gender = new_gender
@@ -58,6 +64,8 @@ class Santa
 end
 
 santa = Santa.new("Female", "Laplander")
+p santa.age
+p santa.ethnicity
 p santa.get_mad_at
 santa.gender= "Gender Neutral"
 puts "#{santa.gender}"
