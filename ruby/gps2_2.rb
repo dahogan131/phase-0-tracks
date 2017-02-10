@@ -26,6 +26,16 @@
 # steps:
 # output:
 
+def add_item(items)
+	items = items.split(" ")
+	item_hash = Hash.new
+	items.each do |item|
+		p "insert quantity"
+		item_hash[item] = gets.to_i
+	end	
+	return item_hash
+end
+
 
 def create_a_list(items)
 	items = items.split(" ")
@@ -40,6 +50,9 @@ end
 
 
 #DRIVER CODE ======================================================
+item_list = add_item("carrots apples cereal pizza")
+p item_list
+
 grocery_list = create_a_list("carrots apples cereal pizza")
 p grocery_list
 
