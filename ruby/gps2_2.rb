@@ -26,7 +26,22 @@
 # steps:
 # output:
 
-def add_item(items)
+my_hash = {:a => 1, :b => 2}
+my_hash.delete(:a)
+p my_hash
+def delete_item(items)
+	items = items.split(" ")
+	item_hash = Hash.new
+	items.each do |item|
+		item_hash[item] = 0
+		p item_hash
+	end
+	p "what is it you would like to get off your list?"
+	item_hash.delete(gets.chomp)
+	return item_hash
+end
+
+def quantity(items)
 	items = items.split(" ")
 	item_hash = Hash.new
 	items.each do |item|
@@ -50,8 +65,11 @@ end
 
 
 #DRIVER CODE ======================================================
-item_list = add_item("carrots apples cereal pizza")
-p item_list
+delete_item = delete_item("carrots apples cereal pizza")
+p delete_item
+
+quantity = quantity("carrots apples cereal pizza")
+p quantity
 
 grocery_list = create_a_list("carrots apples cereal pizza")
 p grocery_list
