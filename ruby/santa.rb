@@ -20,6 +20,7 @@
 # p initialize
 # Santa = Class.new do
 class Santa
+	attr_reader :gender, :ethnicity, :age
 	def initialize(gender, ethnicity, age = 0, reindeer = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Donner", "Blitzen"])
 		@gender = gender
 		@ethnicity = ethnicity
