@@ -38,15 +38,18 @@ class Santa
 	def celebrate_birthday
 		 @age = @age + 1
 	end
-	def get_mad_at(reindeer)
+	def get_mad_at
 		#Method asks for reindeer
 		#Inserts that reindeer at end of array (push or <<)
 		#Delete reindeer at it's original location on index
-		@reindeer
+		p "which reindeer are you mad at?"
+		user_input = gets.chomp
+		@reindeer.delete(user_input)
+		@reindeer << user_input 
 	end	
 # Establishing Getter Method for Attribute
 	def gender
-	 	@gender
+	  	@gender
 	end
 #Establishing Setter Method
 	def gender=(new_gender)
@@ -55,7 +58,7 @@ class Santa
 end
 
 santa = Santa.new("Female", "Laplander")
-p santa
+p santa.get_mad_at
 santa.gender= "Gender Neutral"
 puts "#{santa.gender}"
 p santa
