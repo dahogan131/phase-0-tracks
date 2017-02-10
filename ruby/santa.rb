@@ -19,7 +19,30 @@
 # p eat_milk_and_cookies("gingersnap")
 # p initialize
 # Santa = Class.new do
+class Santas
+	attr_reader :gender, :ethnicity
+	attr_accessor :gender, :ethnicity
+	def different_santas(gender = ["Bigender", "Gender Fluid", "Male", "Two Spirit", "Female", "Gender Neutral"], ethnicity = ["Laplander", "Yupik", "Samoan", "Hutu", "Korean", "Fijian"])
+		@gender = gender
+		@ethnicity = ethnicity
+		p gender
+		p ethnicity
+			# santa_gen_eth = []
+			# gender.each do |i|
+			# p i
+			# santa_gen_eth << different_santas(gender[i], ethnicity[i])
+			# p santa_gen_eth
+			# end
+	end
+end
+
+santas = Santas.new
+p santas
+p santas.different_santas
+
 class Santa
+	attr_reader :gender, :ethnicity, :age
+	attr_accessor :gender, :ethnicity, :age
 	def initialize(gender, ethnicity, age = 0, reindeer = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Donner", "Blitzen"])
 		@gender = gender
 		@ethnicity = ethnicity
@@ -36,24 +59,46 @@ class Santa
 	end
 	
 	def celebrate_birthday
-		 @age + 1
+		 @age = @age + 1
 	end
-	def reindeer_ranking(reindeer)
-		
+	def get_mad_at
+		#Method asks for reindeer
+		#Inserts that reindeer at end of array (push or <<)
+		#Delete reindeer at it's original location on index
+		p "which reindeer are you mad at?"
+		user_input = gets.chomp
+		@reindeer.delete(user_input)
+		@reindeer << user_input 
 	end	
 # Establishing Getter Method for Attribute
-	def gender
-	 	@gender
-	end
+	# def gender
+	#   	@gender
+	# end
+	# def age
+	# 	@age
+	# end
+	# def ethnicity
+	# 	@ethnicity
+	# end
 #Establishing Setter Method
-	def gender=(new_gender)
-		@gender = new_gender
-	end
+	# def gender=(new_gender)
+	# 	@gender = new_gender
+	# end
+	# def age=(new_age)
+	# 	@age = new_age
+	# end
+	# def ethnicity=(new_ethnicity)
+	# 	@ethnicity = new_ethnicity
+	# end
 end
 
 santa = Santa.new("Female", "Laplander")
-p santa
+p santa.age
+p santa.ethnicity
+p santa.get_mad_at
 santa.gender= "Gender Neutral"
+santa.ethnicity= "Hutu"
+santa.age= 25
 puts "#{santa.gender}"
 p santa
 p santa.celebrate_birthday
