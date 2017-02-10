@@ -20,8 +20,6 @@
 # p initialize
 # Santa = Class.new do
 class Santa
-	reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Donner", "Blitzen"]
-	age = 0
 	def initialize(gender, ethnicity)
 		@gender = gender
 		@ethnicity = ethnicity
@@ -34,6 +32,14 @@ class Santa
 		p "Oh man, friggin' loved that #{cookie}!"
 		@cookie = cookie
 	end
+	def santa_age(age)
+		@age = age
+		age = 0
+	end
+	def reindeer_ranking(reindeer)
+		@reindeer = reindeer
+		reindeer = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Donner", "Blitzen"]
+	end	
 # Establishing Getter Method for Attribute
 	def gender
 	 	@gender
@@ -48,29 +54,30 @@ santa = Santa.new("Female", "Laplander")
 p santa
 santa.gender= "Gender Neutral"
 puts "#{santa.gender}"
+p santa
 
- santas = []
- santas << Santa.new("Male", "Dinka")
- santas << Santa.new("Gender Fluid", "Romansh")
- santas << Santa.new("Agender", "Inupiat")
- santas << Santa.new("Bigender", "Korean")
+ # santas = []
+ # santas << Santa.new("Male", "Dinka")
+ # santas << Santa.new("Gender Fluid", "Romansh")
+ # santas << Santa.new("Agender", "Inupiat")
+ # santas << Santa.new("Bigender", "Korean")
 
- p santas
+ # p santas
 
 # Santa sequence keeps recurring. Somehow need to make that not happen. 
 
-santas2 = []
-ex_gen = ["Male", "Gender Fluid", "Agender", "Bigender"]
-ex_eth = ["Dinka", "Romansh", "Inupiat", "Korean"]
+# santas2 = []
+# ex_gen = ["Male", "Gender Fluid", "Agender", "Bigender"]
+# ex_eth = ["Dinka", "Romansh", "Inupiat", "Korean"]
 
-ex_gen.length.times do |i|
-	p i
-	santas2 << Santa.new(ex_gen[i], ex_eth[i])
-	p santas2
-	p "incomplete index"
-end
+# ex_gen.length.times do |i|
+# 	p i
+# 	santas2 << Santa.new(ex_gen[i], ex_eth[i])
+# 	p santas2
+# 	p "incomplete index"
+# end
 
-p santas2
+# p santas2
 
 
 # santa = Santa.new("Male", "Dinka")
