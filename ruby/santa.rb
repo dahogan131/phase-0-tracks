@@ -25,20 +25,15 @@ class Santas
 	def different_santas(gender = ["Bigender", "Gender Fluid", "Male", "Two Spirit", "Female", "Gender Neutral"], ethnicity = ["Laplander", "Yupik", "Samoan", "Hutu", "Korean", "Fijian"])
 		@gender = gender
 		@ethnicity = ethnicity
-		p gender
-		p ethnicity
-			# santa_gen_eth = []
-			# gender.each do |i|
-			# p i
-			# santa_gen_eth << different_santas(gender[i], ethnicity[i])
-			# p santa_gen_eth
-			# end
+		#
 	end
 end
-
+santas_arr = []
 santas = Santas.new
-p santas
-p santas.different_santas
+santas_arr << Santas.new
+p santas_arr
+#p santas
+#p santas.different_santas
 
 class Santa
 	attr_reader :gender, :ethnicity, :age
@@ -70,6 +65,31 @@ class Santa
 		@reindeer.delete(user_input)
 		@reindeer << user_input 
 	end	
+
+
+class Santas
+	attr_reader :gender, :ethnicity
+	attr_accessor :gender, :ethnicity
+	def different_santas
+	  gender_array = ["Bigender", "Gender Fluid", "Male", "Two Spirit", "Female", "Gender Neutral"]
+	  ethnicity_array = ["Laplander", "Yupik", "Samoan", "Hutu", "Korean", "Fijian"]
+		@gender = gender
+		@ethnicity = ethnicity
+		number_santas = 0 
+		until number_santas == 50
+	  		gender = gender_array.sample
+	  		ethnicity = ethnicity_array.sample
+	  		age = rand(0..140)
+	  		p gender
+	  		p ethnicity
+	  		p age
+	  		number_santas = number_santas + 1 
+  		end
+	end
+end	
+
+santas = Santas.new 
+p santas.different_santas
 # Establishing Getter Method for Attribute
 	# def gender
 	#   	@gender
@@ -103,13 +123,13 @@ puts "#{santa.gender}"
 p santa
 p santa.celebrate_birthday
 
- # santas = []
- # santas << Santa.new("Male", "Dinka")
- # santas << Santa.new("Gender Fluid", "Romansh")
- # santas << Santa.new("Agender", "Inupiat")
- # santas << Santa.new("Bigender", "Korean")
+  santas = []
+  santas << Santa.new("Male", "Dinka")
+  santas << Santa.new("Gender Fluid", "Romansh")
+  santas << Santa.new("Agender", "Inupiat")
+  santas << Santa.new("Bigender", "Korean")
 
- # p santas
+  p santas
 
 # Santa sequence keeps recurring. Somehow need to make that not happen. 
 
