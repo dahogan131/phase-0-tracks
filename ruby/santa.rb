@@ -21,6 +21,7 @@
 # Santa = Class.new do
 class Santa
 	attr_reader :gender, :ethnicity, :age
+	attr_accessor :gender, :ethnicity, :age
 	def initialize(gender, ethnicity, age = 0, reindeer = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Donner", "Blitzen"])
 		@gender = gender
 		@ethnicity = ethnicity
@@ -49,25 +50,25 @@ class Santa
 		@reindeer << user_input 
 	end	
 # Establishing Getter Method for Attribute
-	def gender
-	  	@gender
-	end
-	def age
-		@age
-	end
-	def ethnicity
-		@ethnicity
-	end
+	# def gender
+	#   	@gender
+	# end
+	# def age
+	# 	@age
+	# end
+	# def ethnicity
+	# 	@ethnicity
+	# end
 #Establishing Setter Method
-	def gender=(new_gender)
-		@gender = new_gender
-	end
-	def age=(new_age)
-		@age = new_age
-	end
-	def ethnicity=(new_ethnicity)
-		@ethnicity = new_ethnicity
-	end
+	# def gender=(new_gender)
+	# 	@gender = new_gender
+	# end
+	# def age=(new_age)
+	# 	@age = new_age
+	# end
+	# def ethnicity=(new_ethnicity)
+	# 	@ethnicity = new_ethnicity
+	# end
 end
 
 santa = Santa.new("Female", "Laplander")
