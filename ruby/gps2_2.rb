@@ -27,4 +27,20 @@
 # output:
 
 
+def create_a_list(items)
+	items = items.split(" ")
+	item_hash = Hash.new
+	items.each do |item|
+		item_hash[item] = 1
+	end
+#Return allows us to call it without calling it in driver code. 
+	return item_hash
+end
+
+
+
+#DRIVER CODE ======================================================
+grocery_list = create_a_list("carrots apples cereal pizza")
+p grocery_list
+
 
