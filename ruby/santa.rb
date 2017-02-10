@@ -87,6 +87,9 @@ class Santas
   		end
 	end
 end	
+
+santas = Santas.new 
+p santas.different_santas
 # Establishing Getter Method for Attribute
 	# def gender
 	#   	@gender
