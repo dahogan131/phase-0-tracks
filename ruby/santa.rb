@@ -36,10 +36,13 @@ class Santa
 	end
 	
 	def celebrate_birthday
-		 @age + 1
+		 @age = @age + 1
 	end
-	def reindeer_ranking(reindeer)
-		
+	def get_mad_at(reindeer)
+		#Method asks for reindeer
+		#Inserts that reindeer at end of array (push or <<)
+		#Delete reindeer at it's original location on index
+		@reindeer
 	end	
 # Establishing Getter Method for Attribute
 	def gender
