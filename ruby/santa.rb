@@ -20,9 +20,11 @@
 # p initialize
 # Santa = Class.new do
 class Santa
-	def initialize(gender, ethnicity)
+	def initialize(gender, ethnicity, age = 0, reindeer = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Donner", "Blitzen"])
 		@gender = gender
 		@ethnicity = ethnicity
+		@age = age
+		@reindeer = reindeer
 		p "Initializing Santa Sequence, #{@name}..."
 	end
 	def speak
@@ -32,13 +34,12 @@ class Santa
 		p "Oh man, friggin' loved that #{cookie}!"
 		@cookie = cookie
 	end
-	def santa_age(age)
-		@age = age
-		age = 0
+	
+	def celebrate_birthday
+		 @age + 1
 	end
 	def reindeer_ranking(reindeer)
-		@reindeer = reindeer
-		reindeer = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Donner", "Blitzen"]
+		
 	end	
 # Establishing Getter Method for Attribute
 	def gender
@@ -55,6 +56,7 @@ p santa
 santa.gender= "Gender Neutral"
 puts "#{santa.gender}"
 p santa
+p santa.celebrate_birthday
 
  # santas = []
  # santas << Santa.new("Male", "Dinka")
