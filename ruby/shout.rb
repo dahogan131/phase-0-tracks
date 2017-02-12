@@ -37,9 +37,11 @@ end
 
 grandpa = Grandpa.new
 grandpa.yell_angrily("GET OFF MY LAWN")
+grandpa.yelling_happily("I DONE MADE 'N GUNPOWDER STEW FER SUPPER")
 
 devfriend = DevFriend.new
-devfriend.yelling_happily("WELCOME TO THE PARTY!")
+devfriend.yelling_happily("WELCOME TO THE PARTY")
+devfriend.yell_angrily("BRUH, YOU SCREWED UP THE ENTIRE CODE")
 
 
 # #This module is a mixin. We do not use the self keyboard here.
