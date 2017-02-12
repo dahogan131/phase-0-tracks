@@ -10,3 +10,23 @@
   #Next, the index of the letter from the secret word will be swapped out with the corresponding index of the ["_", "_", "_"] array.
   # Then the ["_", "_", "_"] array will be put back together into string form. 
 #congratulatory message if they lose, taunting message if they win. 
+
+times = 0 
+index = 0
+word = "camel"
+user_input = gets.chomp
+while times != word.length
+  correct_letters = "_" * word.length
+  correct_letters = correct_letters.chars
+  word = word.chars
+  p word[index]
+  p correct_letters
+  p correct_letters.class
+  p "guess the word"
+  correct_letters = correct_letters.join
+  word = word.join
+  user_input = gets.chomp
+  index +=1 
+  times +=1 
+end
+p "done"
