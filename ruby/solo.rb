@@ -35,7 +35,7 @@ times = 0
 index = 0 
 word = ["c", "a", "m", "e", "l"]
 letter_answer = ["_", "_", "_", "_", "_"]
-while times != word.length
+while times != word.length + 3
 p "guess a letter"
 user_input = gets.chomp 
 # Consider if/else being the true/false for the method in determining guess count...  
@@ -59,6 +59,8 @@ user_input = gets.chomp
     letter_answer.delete_at(4)
     letter_answer.insert(4, word[4])
     p letter_answer.join
+   else
+   	p "EHH! Wrong!"
   end
   times += 1
 end
