@@ -1,13 +1,64 @@
+# module Shout
+#   # we'll put some methods here soon, but this code is fine for now!
+#   def self.yell_angrily(words)
+#   	words + "!!!" + " :("
+#   end
+
+#   def self.yelling_happily(words)
+#   	words + "!!!" + " :DDDDD"
+#   end
+# end
+ 
+# p Shout.yell_angrily("GET OFF MY LAWN")
+# p Shout.yelling_happily("WELCOME TO THE PARTY!")
+
+
+#1: Create mixin version of shout module
+#2: Write 2 classes representing anything that might shout and include shout module
+#3: Test work by adding driver code
+
 module Shout
-  # we'll put some methods here soon, but this code is fine for now!
-  def self.yell_angrily(words)
-  	words + "!!!" + " :("
+  def yell_angrily(words)
+  	puts "#{words}" + "!!!" + " :("
   end
 
-  def self.yelling_happily(words)
-  	words + "!!!" + " :DDDDD"
+  def yelling_happily(words)
+  	puts "#{words}" + "!!!" + " :DDDDD"
   end
 end
- 
-p Shout.yell_angrily("GET OFF MY LAWN")
-p Shout.yelling_happily("WELCOME TO THE PARTY!")
+
+class Grandpa
+	include Shout 
+end
+
+class DevFriend
+	include Shout
+end
+
+grandpa = Grandpa.new
+grandpa.yell_angrily("GET OFF MY LAWN")
+
+devfriend = DevFriend.new
+devfriend.yelling_happily("WELCOME TO THE PARTY!")
+
+
+# #This module is a mixin. We do not use the self keyboard here.
+# module Flight
+# 	def take_off(altitude)
+# 		puts "Taking off and ascending until reaching #{altitude}..."
+# 	end
+# end
+
+# class Bird
+# 	include Flight
+# end 
+
+# class Plane
+# 	include Flight
+# end
+
+# bird = Bird.new
+# bird.take_off(800)
+
+# plane = Plane.new
+# plane.take_off(30000)
