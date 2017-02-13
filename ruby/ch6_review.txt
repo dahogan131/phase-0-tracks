@@ -26,4 +26,12 @@ end
 
 Because I assigned my attributes in the initialize method, they are applicable throughout the entire class and instance methods encompassed withing the class. 
 
+4. What is the purpose of the initialize method? When does it run?
 
+*The initialize method runs once the class is called in the driver code. The initialize method does not itself need to be called, it is the first method in the class that runs. It runs when an instance of the class is initialized. When attributes are inserted in the initialize method, they are applied throughout the class. 
+
+5. What are modules?
+
+*A module is a toolbelt of methods that are commonly used and just really nifty to have on-hand. They are different from a class, in that a class is a collection of methods that interact with each other and form a behaviour. A module is simply a collection of methods. 
+
+6. 
