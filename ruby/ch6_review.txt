@@ -1,0 +1,9 @@
+1. What are classes? Be sure to define the following terms in your explanation and describe the relationships between them:
+
+*class
+*state
+*behavior
+*instance variable
+*instance method
+
+*A class is a template for implementing methods, and is used when a program requires multiple methods to be used and methods that can interact with each other. The instance methods that make up the class determine the behaviour of the class. Instance variables can be recognized by the given format: @variable. Instance variables are applicable throughout the entire class, while regular variables are not recognized outside of their respective method. Instance variables allow instance methods to work together within the class and determine the behaviour of the class.
