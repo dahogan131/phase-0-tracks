@@ -34,4 +34,8 @@ Because I assigned my attributes in the initialize method, they are applicable t
 
 *A module is a toolbelt of methods that are commonly used and just really nifty to have on-hand. They are different from a class, in that a class is a collection of methods that interact with each other and form a behaviour. A module is simply a collection of methods. 
 
-6. 
+6. What are the different ways you can use a module?
+
+*A module can be used to compartmentalize methods, much like a directory compartmentalizes folders and folders to files.
+
+*A module can be used to assign behaviour to multiple classes. This is known as a Mixin Module. 
