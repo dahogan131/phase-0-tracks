@@ -62,8 +62,8 @@
   #===================================================================================================
 
 class HangMan 
-    attr_reader: :name, :number_guesses, :user_input, :correct_letters
-    attr_accessor: :name, :number_guesses, :user_input, :correct_letters
+    attr_reader :name, :number_guesses, :user_input, :correct_letters
+    attr_accessor :name, :number_guesses, :user_input, :correct_letters
     def initialize
       @name = ["c", "a", "m", "e", "l"]
       @number_guesses = @name.length + 3
