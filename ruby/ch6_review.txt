@@ -14,3 +14,16 @@
 
 3. Give an example of a real world object, and describe how you might assign its attributes if you were to design a class to represent that object.
 
+*Let's say my object is an economy car. I would want to assign attributes for height, weight, miles-per-gallon and color. I would do so in my initialize method as such:
+class Car
+	def initialize
+		@height = 5
+		@weight = 3000
+		@mpg = 32
+		@color = grey
+	end
+end
+
+Because I assigned my attributes in the initialize method, they are applicable throughout the entire class and instance methods encompassed withing the class. 
+
+
