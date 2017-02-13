@@ -77,11 +77,6 @@ class HangMan
     @game_over = false
     p @number_guesses
   end
-  # def blank_space
-  #   blank_space = "_" * (@number_guesses - 3)
-  #   p blank_space
-  #   @blank_space = blank_space.chars
-  end
   def fill_blank_space
   guess = 0
   index = 0
