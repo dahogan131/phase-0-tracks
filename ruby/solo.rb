@@ -84,66 +84,23 @@ class HangMan
   end
   def fill_blank_space
   guess = 0
+  index = 0
   while guess != @number_guesses
-    index = 0
     p "guess a letter"
     
    @user_input = gets.chomp
     @blank_space = @blank_space.chars
     @name = name
-    if @user_input == @name[0] 
-       @blank_space.delete_at(0)
-       @blank_space.insert(0, @name[0])
-       p @blank_space.join
-     elsif @user_input == @name[1] 
-       @blank_space.delete_at(1)
-       @blank_space.insert(1, @name[1])
-       p @blank_space.join
-     elsif @user_input == @name[2] 
-       @blank_space.delete_at(2)
-       @blank_space.insert(2, @name[2])
-       p @blank_space.join
-     elsif @user_input == @name[3] 
-       @blank_space.delete_at(3)
-       @blank_space.insert(3, @name[3])
-       p @blank_space.join
-     elsif @user_input == @name[4] 
-       @blank_space.delete_at(4)
-       @blank_space.insert(4, @name[4])
-       p @blank_space.join
-     elsif @user_input == @name[5] 
-       @blank_space.delete_at(5)
-       @blank_space.insert(5, @name[5])
-       p @blank_space.join
-     elsif @user_input == @name[6] 
-       @blank_space.delete_at(6)
-       @blank_space.insert(6, @name[6])
-       p @blank_space.join
-     elsif @user_input == @name[7] 
-       @blank_space.delete_at(7)
-       @blank_space.insert(7, @name[7])
-       p @blank_space.join
-     elsif @user_input == @name[8] 
-       @blank_space.delete_at(8)
-       @blank_space.insert(8, @name[8])
-       p @blank_space.join
-     elsif @user_input == @name[9] 
-       @blank_space.delete_at(9)
-       @blank_space.insert(9, name[9])
-       p @blank_space.join
-     elsif @user_input == @name[10] 
-       @blank_space.delete_at(10)
-       @blank_space.insert(10, @name[10])
-       p @blank_space.join
-     elsif @user_input == @name[10] 
-       @blank_space.delete_at(10)
-       @blank_space.insert(10, @name[10])
+    if @user_input == @name[index] 
+       @blank_space.delete_at(index)
+       @blank_space.insert(index, @name[index])
        p @blank_space.join
      else
       p "EHH! Wrong!"
      end
-    @blank_space = @blank_space.join 
     index +=1 
+    @blank_space = @blank_space.join 
+    #index +=1 
     guess +=1  
   end   
   end
