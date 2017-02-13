@@ -6,4 +6,11 @@
 *instance variable
 *instance method
 
-*A class is a template for implementing methods, and is used when a program requires multiple methods to be used and methods that can interact with each other. The instance methods that make up the class determine the behaviour of the class. Instance variables can be recognized by the given format: @variable. Instance variables are applicable throughout the entire class, while regular variables are not recognized outside of their respective method. Instance variables allow instance methods to work together within the class and determine the behaviour of the class.
+*A class is a template for implementing methods, and is used when a program requires multiple methods to be used and methods that can interact with each other. The instance methods that make up the class determine the behaviour of the class. Instance variables can be recognized by the given format: @variable. Instance variables are applicable throughout the entire class, while regular variables are not recognized outside of their respective method. Instance variables allow instance methods to work together within the class and determine the behaviour of the class. The behaviour of the class results in data, which is then stored in instance variables in the program. 
+
+2. What are attributes?
+
+*Attributes are the characteristics of data. For example, one may have an Athlete class, with an instance variable, which calls the Athlete's sprint time, but we would use attributes to give the Athlete a name, height, age, gender, etc.
+
+3. Give an example of a real world object, and describe how you might assign its attributes if you were to design a class to represent that object.
+
