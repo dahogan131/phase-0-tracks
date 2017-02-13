@@ -1,0 +1,41 @@
+1. What are classes? Be sure to define the following terms in your explanation and describe the relationships between them:
+
+*class
+*state
+*behavior
+*instance variable
+*instance method
+
+*A class is a template for implementing methods, and is used when a program requires multiple methods to be used and methods that can interact with each other. The instance methods that make up the class determine the behaviour of the class. Instance variables can be recognized by the given format: @variable. Instance variables are applicable throughout the entire class, while regular variables are not recognized outside of their respective method. Instance variables allow instance methods to work together within the class and determine the behaviour of the class. The behaviour of the class results in data, which is then stored in instance variables in the program. 
+
+2. What are attributes?
+
+*Attributes are the characteristics of data. For example, one may have an Athlete class, with an instance variable, which calls the Athlete's sprint time, but we would use attributes to give the Athlete a name, height, age, gender, etc.
+
+3. Give an example of a real world object, and describe how you might assign its attributes if you were to design a class to represent that object.
+
+*Let's say my object is an economy car. I would want to assign attributes for height, weight, miles-per-gallon and color. I would do so in my initialize method as such:
+class Car
+	def initialize
+		@height = 5
+		@weight = 3000
+		@mpg = 32
+		@color = grey
+	end
+end
+
+Because I assigned my attributes in the initialize method, they are applicable throughout the entire class and instance methods encompassed withing the class. 
+
+4. What is the purpose of the initialize method? When does it run?
+
+*The initialize method runs once the class is called in the driver code. The initialize method does not itself need to be called, it is the first method in the class that runs. It runs when an instance of the class is initialized. When attributes are inserted in the initialize method, they are applied throughout the class. 
+
+5. What are modules?
+
+*A module is a toolbelt of methods that are commonly used and just really nifty to have on-hand. They are different from a class, in that a class is a collection of methods that interact with each other and form a behaviour. A module is simply a collection of methods. 
+
+6. What are the different ways you can use a module?
+
+*A module can be used to compartmentalize methods, much like a directory compartmentalizes folders and folders to files.
+
+*A module can be used to assign behaviour to multiple classes. This is known as a Mixin Module. 

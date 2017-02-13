@@ -31,6 +31,192 @@
 # end
 # p "done"
 
+#UPDATED PSEUDOCODE: =========================================================
+
+#Methods will flow into one another. Need Flow pattern. 
+  # number_guesses --> letter_guess --> word_guess -->
+
+#METHODS NEEDED:
+#initialize
+#Method for the number of letter guesses allowed until the program ends
+  #
+#Method for quessing letters
+  # Runs while the method for set number of letter guesses runs. 
+  # If user input = any of the indeces for the secret word, correct letter guess = true
+  # If user input != any of the indeces for the secret word, correct letter guess = false
+#Method for determining if the word was guessed in the allotted number of guesses
+  #If the maximum number of letter guesses boolean = false and the correct answer boolean = false, continue to run the while loop for number of guesses. 
+  #If the maximum number of letter guesses boolean = false and the correct answer boolean = true, discontinue the while loop for number of guesses
+  #If the maximum number of letter guesses boolean = true and the correct answer boolean = false, the correct word boolean = false
+  #If the maximum number of letter guesses boolean = true and the correct answer boolean = true, the correct word boolean = true
+  
+#Method for replacing '_' with correct letter 
+  #May be able to put this conditional in the letter guess method
+#Driver Code:
+  #Driver Code will operate a while loop when the method of letter guesses not equaling the limit of guesses reuturns true. 
+  #When the Method for letter guesses not equaling the limit of guesses returns false, the driver code will refer to the method determining if the 
+  
+  #Methods will flow into one another. Need Flow pattern. 
+  # number_guesses --> letter_guess --> word_guess -->
+
+  #===================================================================================================
+
+#This program is more compact, but has a serious bug.
+#It will only mark as the correct answer if the letter guessed is specific to the index in the loop. 
+
+class HangMan 
+  attr_reader :name, :blank_space, :user_input, :number_guesses, :game_over
+    attr_accessor :name, :blank_space, :user_input, :number_guesses, :game_over
+  
+  def initialize
+    p "Insert a word to be guessed!"
+    @name = gets.chomp.chars
+    @number_guesses = @name.length + 3
+    @blank_space = "_" * (@number_guesses - 3)
+    p @blank_space
+    @game_over = false
+    p @number_guesses
+  end
+  def fill_blank_space
+  guess = 0
+  index = 0
+  while guess != @number_guesses
+    p "guess a letter"
+    
+   @user_input = gets.chomp
+    @blank_space = @blank_space.chars
+    @name = name
+    if @user_input == @name[index] 
+       @blank_space.delete_at(index)
+       @blank_space.insert(index, @name[index])
+       p @blank_space.join
+     else
+      p "EHH! Wrong!"
+     end
+    index +=1 
+    @blank_space = @blank_space.join 
+    #index +=1 
+    guess +=1  
+  end   
+  end
+  def number_guesses
+    guess = 0 
+    if guess = @number_guesses
+      @game_over = true
+      guess += 1 
+    else
+      @game_over = false
+    end 
+  end  
+end 
+  
+  hangman = HangMan.new 
+  #p hangman.name
+  while hangman.fill_blank_space
+    game.number_guesses
+  end
+
+
+#Second Program: This program lets you guess the user input word, but it only works for words with 11 characters or less.
+
+class HangMan 
+  attr_reader :name, :blank_space, :user_input, :number_guesses, :game_over
+    attr_accessor :name, :blank_space, :user_input, :number_guesses, :game_over
+  
+  def initialize
+    p "Insert a word to be guessed!"
+    @name = gets.chomp.chars
+    @number_guesses = @name.length + 3
+    @blank_space = "_" * (@number_guesses - 3)
+    p @blank_space
+    @game_over = false
+    p @number_guesses
+  end
+  def fill_blank_space
+  guess = 0
+  index = 0
+  while guess != @number_guesses
+    p "guess a letter"
+    
+   @user_input = gets.chomp
+    @blank_space = @blank_space.chars
+    @name = name
+    if @user_input == @name[0] 
+       @blank_space.delete_at(0)
+       @blank_space.insert(0, @name[0])
+       p @blank_space.join
+     elsif @user_input == @name[1] 
+       @blank_space.delete_at(1)
+       @blank_space.insert(1, @name[1])
+       p @blank_space.join
+     elsif @user_input == @name[2] 
+       @blank_space.delete_at(2)
+       @blank_space.insert(2, @name[2])
+       p @blank_space.join
+     elsif @user_input == @name[3] 
+       @blank_space.delete_at(3)
+       @blank_space.insert(3, @name[3])
+       p @blank_space.join
+     elsif @user_input == @name[4] 
+       @blank_space.delete_at(4)
+       @blank_space.insert(4, @name[4])
+       p @blank_space.join
+     elsif @user_input == @name[5] 
+       @blank_space.delete_at(5)
+       @blank_space.insert(5, @name[5])
+       p @blank_space.join
+     elsif @user_input == @name[6] 
+       @blank_space.delete_at(6)
+       @blank_space.insert(6, @name[6])
+       p @blank_space.join
+     elsif @user_input == @name[7] 
+       @blank_space.delete_at(7)
+       @blank_space.insert(7, @name[7])
+       p @blank_space.join
+     elsif @user_input == @name[8] 
+       @blank_space.delete_at(8)
+       @blank_space.insert(8, @name[8])
+       p @blank_space.join
+     elsif @user_input == @name[9] 
+       @blank_space.delete_at(9)
+       @blank_space.insert(9, name[9])
+       p @blank_space.join
+     elsif @user_input == @name[10] 
+       @blank_space.delete_at(10)
+       @blank_space.insert(10, @name[10])
+       p @blank_space.join
+     elsif @user_input == @name[10] 
+       @blank_space.delete_at(10)
+       @blank_space.insert(10, @name[10])
+       p @blank_space.join
+     else
+      p "EHH! Wrong!"
+     end
+    index +=1
+    @blank_space = @blank_space.join 
+    #index +=1 
+    guess +=1  
+  end   
+  end
+  def number_guesses
+    guess = 0 
+    if guess = @number_guesses
+      @game_over = true
+      guess += 1 
+    else
+      @game_over = false
+    end 
+  end  
+end 
+  
+  hangman = HangMan.new 
+  #p hangman.name
+  while hangman.fill_blank_space
+    game.number_guesses
+  end
+
+#Rough Draft Code Below ===============================
+
 times = 0 
 index = 0 
 word = ["c", "a", "m", "e", "l"]
