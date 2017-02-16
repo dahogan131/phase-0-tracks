@@ -7,6 +7,8 @@
 				//key = horse[i], value = 'colors'[i]
 
 
+
+
 var colors = ["blue", "red", "orange", "purple"]
 var horse = ["Rocky", "Fin", "Ed", "Martha"]
 
@@ -15,6 +17,15 @@ horse.push("Hass")
 console.log(colors)
 console.log(horse)
 
-var horseColors = {
-	
+//Curly brackets = ruby end. 
+//Curly brackets encompass that which is being done in the loop. 
+var horseColors = {}
+function horseObject() {
+	if (colors.length == horse.length){
+		for (var index = 0; index < colors.length; index +=1){
+		horseColors[horse[index]] = colors[index] 
+		}
+	return horseColors
+	}	
 }
+console.log(horseObject(horseColors))
