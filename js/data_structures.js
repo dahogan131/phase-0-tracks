@@ -29,3 +29,32 @@ function horseObject() {
 	}	
 }
 console.log(horseObject(horseColors))
+
+function Car(make, model, mpg) {
+	console.log("This is our new car...")
+	this.make = make;
+	this.model = model;
+	this.mpg = mpg;	
+
+	this.engine = function() {console.log("Vroom!") }; 
+
+	console.log("CAR INITIALIZATION COMPLETE");	
+}
+
+console.log("Let's buy a car ...");
+var anotherCar = new Car("Hyundai", "Azera", 28);
+console.log(anotherCar)
+console.log("Our car can rev!")
+anotherCar.engine()
+
+console.log("Let's buy a car ...");
+var carTwo = new Car("Ford", "Focus Electric", "NA");
+console.log(carTwo)
+console.log("Our car can rev!")
+carTwo.engine()
+
+console.log("Let's buy a car ...");
+var carThree = new Car("Smart", "ForTwo", "40");
+console.log(carThree)
+console.log("Our car can rev!")
+carThree.engine()
