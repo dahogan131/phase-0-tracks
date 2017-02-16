@@ -18,33 +18,47 @@ class VirusPredictor
     @population_density = population_density
   end
 #Calls 2 other methods. Assigns attributes to the called methods. 
+
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths#(@population_density, @population, @state) <----
+    speed_of_spread #(@population_density, @state) <----- No Parameters needed. Attributes established
   end
 
   private
 #Conditional based on population density attribute. 
 #More population density = more deaths
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths#(population_density, population, state) <---- Did not need parameters. Attributes are already in initialize.
     # predicted deaths is solely based on population density
-    if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
-    elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
-    elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
-    elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
-    else
-      number_of_deaths = (@population * 0.05).floor
+  #MAKE IT MORE DRY
+  #Create until loop where population density and float coefficient decrease by 50 and 0.1 each loop, respectively.  
+    pop_den = 200
+    x = 0.4
+    until pop_den == 0 
+      if @population_density >= pop_den
+        number_of_deaths = (@population * x).floor
+      else @population_density < 50
+        number_of_deaths = (@population * 0.05).floor
+      end 
+      pop_den -= 50
+      x -= 0.1
     end
+    # if @population_density >= 200
+    #   number_of_deaths = (@population * 0.4).floor
+    # elsif @population_density >= 150
+    #   number_of_deaths = (@population * 0.3).floor
+    # elsif @population_density >= 100
+    #   number_of_deaths = (@population * 0.2).floor
+    # elsif @population_density >= 50
+    #   number_of_deaths = (@population * 0.1).floor
+    # else
+    #   number_of_deaths = (@population * 0.05).floor
+    # end
 
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
 
-  def speed_of_spread(population_density, state) 
+  def speed_of_spread#(population_density, state) 
 # Conditional that increments the speed value based upon population density. 
 
   #in months
