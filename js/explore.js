@@ -3,6 +3,7 @@
 	//In the loop, the index of the string decreases by 1 each loop
 	//In the loop there is a variable that represents an empty string.
 		//Each loop cycle, the character of the string index is added to the empty string.
+		//The empty string 
 
 //This function will do it, but it's string length-specific. Want to incorporate the loop so that any word can be input
 
