@@ -124,3 +124,9 @@ alaska.virus_effects
 
 #=======================================================================
 # Reflection Section
+
+#Presentation is one difference between the hash syntaxes. Quotes allow for hash keys with upper-case letters or have spaces. It useful for a user interface; a situation where the user will see the keys.
+#Require_relative allows you to access the file you want by typing the access path from your current location on your computer.
+#Using the .each method for a block seems to be very effective in iterating through a hash.
+#The variables were set as parameters, which seemed a bit excessive, because they were attributes. Attributes were already recognized throughout the class and the method was really just calling other methods. So having parameters, let alone attributes as parameters, seemed excessive.
+#I felt like iterating hashes felt most solidified. I had some questions about iteration of more comlex hashes, and I felt like this GPS answered my questions.
