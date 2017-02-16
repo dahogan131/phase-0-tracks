@@ -58,3 +58,34 @@ var carThree = new Car("Smart", "ForTwo", "40");
 console.log(carThree)
 console.log("Our car can rev!")
 carThree.engine()
+
+// Release 3:
+
+//1. If you wanted to loop through the keys and values of an object, how would you do that? (There are a few ways to accomplish this, and some gotchas that can happen depending on your approach.)
+
+// I found the following code on StackOverflow that loops through keys and values in an object:
+
+// var p = {
+//     "p1": "value1",
+//     "p2": "value2",
+//     "p3": "value3"
+// };
+
+// for (var key in p) {
+//   if (p.hasOwnProperty(key)) {
+//     console.log(key + " -> " + p[key]);
+//   }
+// }
+
+//I can remove the key or value (p[key]) from console log if I want to loop through only value or key, respectively.
+//This loop seems to run independently of the value of the index. The index is not mentioned here. 
+	//This loop is dependent on the in operator relating to the key and value. 
+		// The in operator tells us whether an object (in this case, a key) has a property name. 
+		// This loop operates as long as the key has a value. 
+// This code also has a conditional, depending on the hasOwnProperty operator. 
+	//hasOwnProperty checks to make sure the value belongs to the specified key.
+//console.log is inside the loop to print each key and value pair in the object.
+
+//2. Are there advantages to using constructor functions to create objects? Disadvantages? 
+//One serious advantage is you can simply input arguements into the functions and it will run. One can even loop through data structures and use constructor methods to run for hundreds of pieces of data. This would produce DRY code.
+//A big disadvantage
