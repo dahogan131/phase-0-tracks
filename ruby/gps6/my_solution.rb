@@ -4,25 +4,28 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
+# require_relative allows you to access the file you want by typing the access path from your current location on your computer.
+# with require, you would need to type out the entire path to get to the file you want to work with. 
 #
 require_relative 'state_data'
 
 class VirusPredictor
+#Initialize assigns attributes (characteristics) to program and assigns the values that are input in the Driver Code with the parameters.
 
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
-
+#Calls 2 other methods. Assigns attributes to the called methods. 
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
 
   private
-
+#Conditional based on population density attribute. 
+#More population density = more deaths
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -41,7 +44,10 @@ class VirusPredictor
 
   end
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread(population_density, state) 
+# Conditional that increments the speed value based upon population density. 
+
+  #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -65,6 +71,10 @@ class VirusPredictor
 end
 
 #=======================================================================
+#Run a .each for each state key in the STATE_DATA hash. 
+#For each of the state keys, we want to run the VirusPredictor program.
+  #Needs to be able to accept state key, population density and population as arguments.  
+
 
 # DRIVER CODE
  # initialize VirusPredictor for each state
