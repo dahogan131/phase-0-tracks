@@ -74,6 +74,10 @@ end
 #Run a .each for each state key in the STATE_DATA hash. 
 #For each of the state keys, we want to run the VirusPredictor program.
   #Needs to be able to accept state key, population density and population as arguments.  
+STATE_DATA.each do |state, number|
+  state = VirusPredictor.new(state, number[:population_density], number[:population])
+  state.virus_effects
+end
 
 
 # DRIVER CODE
