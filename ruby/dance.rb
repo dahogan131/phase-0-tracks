@@ -73,23 +73,27 @@ class Dancer
   def card
     @card
   end
+  # def begin_next_dance
+  #   #Got it to return the string, but it returns the last name called in the queue. 
+  #   i = 0
+  #   while i != @card.length
+  #     queue = "Now dancing with #{@card[i]}."
+  #     p queue
+  #     #@card.shift
+  #     i +=1
+  #   end
+  #   queue
+  # end
   def begin_next_dance
-    #Got it to return the string, but it returns the last name called in the queue. 
-    # i = 0
-    # while i != @card.length
-    #   queue = "Now dancing with #{@card[i]}."
-    #   #@card.shift
-    #   i +=1
-    # end
-    # queue
-    queue = "Now dancing with #{@card[0]}."
+    i = 0
+    while i != 2 #@card.length
+      queue = "Now dancing with #{@card[0]}."
+      p queue
+      @card.shift
+      i +=1
+    end
     queue
-     @card.shift 
-    # queue = "Now dancing with #{@card[0]}."
-    # queue
-
   end
-  
 end
 
 
