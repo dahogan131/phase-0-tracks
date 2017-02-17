@@ -37,23 +37,59 @@
 #    expect(dancer.bow).to eq "*bows*"
 #  end
 
+# it "can add parters to the dance card queue" do
+#   dancer.queue_dance_with("Mikhail Baryshnikov")
+#   expect(dancer.card).to eq ["Mikhail Baryshnikov"]
+#   dancer.queue_dance_with("Anna Pavlova")
+#   expect(dancer.card).to eq ["Mikhail Baryshnikov", "Anna Pavlova"]
+#   end
+  
+#   it "can start the next dance in the queue" do
+#   dancer.queue_dance_with("Mikhail Baryshnikov")
+#   dancer.queue_dance_with("Anna Pavlova")
+#   expect(dancer.begin_next_dance).to eq "Now dancing with Mikhail Baryshnikov."
+#   expect(dancer.card).to eq ["Anna Pavlova"]
+#   end
+
 class Dancer
   attr_accessor  :age
   def initialize(name, age)
     @age = age
     @name = name
+    @card = []
   end
-  #Getter Methods
-  # def age 
-  #   @age
-  # end
   def name
     @name
   end
-  #Setter Method
-  # def age=
-  #   @age + 1
-  # end
+  def pirouette 
+    "*twirls*"
+  end
+  def bow 
+    "*bows*"
+  end
+  def queue_dance_with(performer)
+    @card << performer
+  end 
+  def card
+    @card
+  end
+  def begin_next_dance
+    #Got it to return the string, but it returns the last name called in the queue. 
+    # i = 0
+    # while i != @card.length
+    #   queue = "Now dancing with #{@card[i]}."
+    #   #@card.shift
+    #   i +=1
+    # end
+    # queue
+    queue = "Now dancing with #{@card[0]}."
+    queue
+     @card.shift 
+    # queue = "Now dancing with #{@card[0]}."
+    # queue
+
+  end
+  
 end
 
 
