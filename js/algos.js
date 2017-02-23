@@ -19,14 +19,18 @@
 // }
 // console.log(thearray(["Hello","World"]))
 
+
+//So far, it pushes out the previous element without regard to character length. 
 function array2(arr) {
   var empty = [];
   for (var i = 0; i < arr.length; i++)
     if (arr[i].length > empty.length){
     //Replacing words[0] with words[1]
-    document.write(empty.splice(0,1,arr[i]));
-    document.write(empty);
+    eval(empty.splice(0,1,arr[i]));
+   eval(empty);
+  }else{
+  	empty = arr[i]
   }
     return empty;
 }
-console.log(array2(["Hellothere","World"]));
+console.log(array2(["Welcome","World"]));
