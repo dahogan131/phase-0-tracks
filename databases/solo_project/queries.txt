@@ -1,4 +1,4 @@
-
+RELEASE 2:
 
 1. DISPLAY INFORMATION IN ONE TABLE
 sqlite> SELECT * FROM ship
@@ -51,4 +51,41 @@ sqlite> SELECT * FROM planets
 3|Saturn|false|3
 4|Jupiter|false|1
 sqlite> 
+
+RELEASE 3:
+
+2. TRY OUT JOINS IN DATABASE
+
+*INNER JOIN
+
+sqlite> SELECT ship.ship_name, planets.planet_name FROM ship JOIN planets ON planets.ship_id = ship.id;
+
+Elon's Rocket|Mars
+Apollo 11|Moon
+Not Elon's Rocket|Saturn
+Elon's Rocket|Jupiter
+
+*LEFT JOIN
+*Returned all rows from left table, even when I shanged the conditional so that there were no matches. 
+
+*This  Left join returns both, because ship_name and manufacturer are both on the left table:
+
+sqlite> SELECT ship.ship_name, ship.manufacturer FROM ship LEFT JOIN planets ON planets.ship_id = ship.ship_name;
+Elon's Rocket|Space-X
+Apollo 11|NASA
+Not Elon's Rocket|Lockheed Martin
+
+*This Left Join only returns ship_name, because planet_name is located on the right table and does not get returned.
+
+sqlite> SELECT ship.ship_name, planets.planet_name FROM ship LEFT JOIN planets ON planets.ship_id = ship.ship_name;
+Elon's Rocket|
+Apollo 11|
+Not Elon's Rocket|
+
+
+
+
+
+
+
 
