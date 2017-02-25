@@ -21,8 +21,18 @@ create_teams_table = <<-SQL
 	)
 SQL
 
+create_outcome_table = <<-SQL
+	CREATE TABLE IF NOT EXISTS outcome(
+		id INTEGER PRIMARY KEY,
+		win BOOL,
+		team_comment VARCHAR(255),
+		team_id INT,
+		FOREIGN KEY (team_id) REFERENCES teams(id)
+	)
+SQL
 
 
+db.execute(create_outcome_table)
 db.execute(create_teams_table)
 db.execute(create_player_table)
 
