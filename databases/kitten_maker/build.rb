@@ -30,25 +30,43 @@ def create_team(db, team_name)
 	db.execute("INSERT INTO teams (team_name) VALUES (?)", [team_name])
 end
 
-2.times do |team_name|
-	puts "Please Enter Team Name:"
+user_input = ""
+while user_input != "done"
+# 2.times do |team_name|
+	puts "Please enter Team Name."
 	team_name = gets.chomp
 	create_team(db, team_name)
+	puts "please enter any key to continue submitting teams. when done, enter 'done'"
+	user_input = gets.chomp
 end
 
 def create_players(db, name, age, team_id)
 	db.execute("INSERT INTO players (name, age, team_id) VALUES (?, ?, ?)", [name, age, team_id])
 end
 
-10.times do
+
+user_input = ""
+while user_input != "done"
+	#puts "press any key and enter to start or enter 'done' when finished."
+	#user_input = gets.chomp
 	puts "Hello, what is your age?"
 	age = gets.to_i
 	puts "What is your Team ID number?"
 	team_id = gets.to_i 
   create_players(db, Faker::Name.name, age, team_id)
   	puts "Thank you #{Faker::Name.name}!"
+  	puts "Press any key and enter to continue. Enter 'done' when finished."
+  	user_input = gets.chomp
 end
 
 
 
+ # def list_team(db, name, age, team_name, team_id, id)
+ # 	db.execute("SELECT players.name, players.age, teams.team_name FROM players JOIN teams ON players.team_id=teams.id", [name, age, team_name, team_id, id])
+ # end
+
+ # list_team(db, name, age, "LUDA!", team_id, id)
+
+# team_id.each do |team|
+# 	puts "#{}"
 
