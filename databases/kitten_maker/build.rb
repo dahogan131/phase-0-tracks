@@ -1,5 +1,6 @@
 require 'sqlite3'
 require 'faker'
+require 'table_print'
 
 db = SQLite3::Database.new("ultimate_frisbee.db")
 db.results_as_hash = true
@@ -47,6 +48,7 @@ end
 def game_outcome(db, win, team_comment, team_id)
 	db.execute("INSERT INTO outcome (win, team_comment, team_id) VALUES (?, ?, ?)", [win, team_comment, team_id])
 end
+
 
 user_input = ""
 while user_input != "done"
@@ -100,6 +102,10 @@ puts "What was your Team ID number again?"
 team_id = gets.to_i
 game_outcome(db, win, team_comment, team_id)
 puts "Thank you for playing College Ultimate Frisbee!"
+
+rows = db.execute2 "SELECT * FROM teams"
+
+p rows
 
 
 
