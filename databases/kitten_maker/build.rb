@@ -36,9 +36,19 @@ end
 	create_team(db, team_name)
 end
 
-# def create_player(db, name, age, team_id)
+def create_players(db, name, age, team_id)
+	db.execute("INSERT INTO players (name, age, team_id) VALUES (?, ?, ?)", [name, age, team_id])
+end
 
-# end
+10.times do
+	puts "Hello, what is your age?"
+	age = gets.to_i
+	puts "What is your Team ID number?"
+	team_id = gets.to_i 
+  create_players(db, Faker::Name.name, age, team_id)
+  	puts "Thank you #{Faker::Name.name}!"
+end
+
 
 
 
