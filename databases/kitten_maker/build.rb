@@ -69,11 +69,12 @@ while user_input2 != "done"
 	age = gets.to_i
 	puts "What is your Team ID number?"
 	team_id = gets.to_i 
-  create_players(db, Faker::Name.name, age, team_id)
+ 	 create_players(db, Faker::Name.name, age, team_id)
   	puts "Thank you #{Faker::Name.name}!"
   	puts "Press any key and enter to continue. Enter 'done' when finished."
   	user_input2 = gets.chomp
 end
+
 
 puts "3, 2, 1, ULTIMATE!"
 
@@ -87,27 +88,47 @@ puts "Sportscaster 2: Shush, it's frisbee time!"
 
 puts "3... 2... 1... EHHHHHHH, GAME!"
 
-puts "Great game! Or was it? Enter 'yes' or 'no'"
-user_input = gets.chomp
-	if user_input == "yes" 
-		win = "won" 
-		puts "Any comment your team would like to make on this galiant victory?"
-		team_comment = gets.chomp
-	else 
-		win = "lost"
-		puts "Any comment your team would like to make on this crushing defeat?"
-		team_comment = gets.chomp
-	end
-puts "What was your Team ID number again?"
-team_id = gets.to_i
-game_outcome(db, win, team_comment, team_id)
-puts "Thank you for playing College Ultimate Frisbee!"
+
+puts "How many teams are listed on the roster? We will be going through their wins and losses."
+number_of_teams = gets.to_i
+number_of_teams.times do |number|
+	puts "Great game! Or was it? Enter 'yes' or 'no'"
+	user_input = gets.chomp
+		if user_input == "yes" 
+			win = 1 
+			puts "Any comment your team would like to make on this galiant victory?"
+			team_comment = gets.chomp
+		else 
+			win = 0
+			puts "Any comment your team would like to make on this crushing defeat?"
+			team_comment = gets.chomp
+		end
+	team_id = number
+	game_outcome(db, win, team_comment, team_id)
+	puts "Thank you for playing College Ultimate Frisbee!"
+end
 
 rows = db.execute2 "SELECT * FROM teams"
 
 p rows
 
+# puts "Great game! Or was it? Enter 'yes' or 'no'"
 
+
+# 	user_input = gets.chomp
+# 		if user_input == "yes" 
+# 			win = 1 
+# 			puts "Any comment your team would like to make on this galiant victory?"
+# 			team_comment = gets.chomp
+# 		else 
+# 			win = 0
+# 			puts "Any comment your team would like to make on this crushing defeat?"
+# 			team_comment = gets.chomp
+# 		end
+# 	puts "What was your Team ID number again?"
+# 	team_id = gets.to_i
+# 	game_outcome(db, win, team_comment, team_id)
+# 	puts "Thank you for playing College Ultimate Frisbee!"
 
 # require 'sqlite3'
 # require 'faker'
