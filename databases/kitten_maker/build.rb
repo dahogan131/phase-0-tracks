@@ -24,7 +24,7 @@ SQL
 create_outcome_table = <<-SQL
 	CREATE TABLE IF NOT EXISTS outcome(
 		id INTEGER PRIMARY KEY,
-		win BOOL,
+		win BOOLEAN,
 		team_comment VARCHAR(255),
 		team_id INT,
 		FOREIGN KEY (team_id) REFERENCES teams(id)
@@ -88,11 +88,11 @@ puts "3... 2... 1... EHHHHHHH, GAME!"
 puts "Great game! Or was it? Enter 'yes' or 'no'"
 user_input = gets.chomp
 	if user_input == "yes" 
-		win = true 
+		win = "won" 
 		puts "Any comment your team would like to make on this galiant victory?"
 		team_comment = gets.chomp
 	else 
-		win = false 
+		win = "lost"
 		puts "Any comment your team would like to make on this crushing defeat?"
 		team_comment = gets.chomp
 	end
