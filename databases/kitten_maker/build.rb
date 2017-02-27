@@ -49,10 +49,13 @@ def game_outcome(db, win, team_comment, team_id)
 	db.execute("INSERT INTO outcome (win, team_comment, team_id) VALUES (?, ?, ?)", [win, team_comment, team_id])
 end
 
+def team_name_change(db, team_name, id)
+	db.execute("UPDATE teams SET team_name=? WHERE id=?")
+end
+
 
 user_input = ""
 while user_input != "done"
-# 2.times do |team_name|
 	puts "Please enter Team Name:"
 	team_name = gets.chomp
 	create_team(db, team_name)
@@ -93,6 +96,7 @@ puts "How many teams are listed on the roster? We will be going through their wi
 number_of_teams = gets.to_i
 number_of_teams.times do |number|
 	puts "Great game! Or was it? Enter 'yes' or 'no'"
+	team_id = number
 	user_input = gets.chomp
 		if user_input == "yes" 
 			win = 1 
@@ -102,13 +106,26 @@ number_of_teams.times do |number|
 			win = 0
 			puts "Any comment your team would like to make on this crushing defeat?"
 			team_comment = gets.chomp
+			#ERRORS ABOUND
+			#Need to create method that updates and accepts |number| as argument for conditional.
+			#Creating option to delete team name if it's incorrect.
+			puts "Would you like to change your team name to mask your shame? If so, enter 'yes'"
+				user_input = gets.chomp
+				if user_input == "yes"
+					team_name = gets.chomp
+					#new_name = gets.chomp
+					id = number
+					team_name_change(db, team_name, id)
+				end
+			#Recall method to put corrected information in.
 		end
-	team_id = number
+	#team_id = number
 	game_outcome(db, win, team_comment, team_id)
 	puts "Thank you for playing College Ultimate Frisbee!"
 end
 
-rows = db.execute2 "SELECT * FROM teams"
+rows = db.execute2 "SELECT team_name FROM teams"
+
 
 p rows
 
