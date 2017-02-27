@@ -59,7 +59,7 @@ while user_input != "done"
 	puts "Please enter Team Name:"
 	team_name = gets.chomp
 	create_team(db, team_name)
-	puts "please enter any key to continue submitting teams. when done, enter 'done'"
+	puts "press enter to continue submitting teams. when done, enter 'done'"
 	user_input = gets.chomp
 end
 
@@ -74,7 +74,7 @@ while user_input2 != "done"
 	team_id = gets.to_i 
  	 create_players(db, Faker::Name.name, age, team_id)
   	puts "Thank you #{Faker::Name.name}!"
-  	puts "Press any key and enter to continue. Enter 'done' when finished."
+  	puts "Press enter to continue. Enter 'done' when finished."
   	user_input2 = gets.chomp
 end
 
@@ -92,15 +92,15 @@ puts "Sportscaster 2: Shush, it's frisbee time!"
 puts "3... 2... 1... EHHHHHHH, GAME!"
 
 
-puts "How many teams are listed on the roster? We will be going through their wins and losses."
+puts "How many teams are listed on the roster? We will be going through their wins and losses starting with Team ID 1 and working down."
 number_of_teams = gets.to_i
 number_of_teams.times do |number|
 	puts "Great game! Or was it? Enter 'yes' or 'no'"
-	team_id = number
+	team_id = number + 1
 	user_input = gets.chomp
 		if user_input == "yes" 
 			win = 1 
-			puts "Any comment your team would like to make on this galiant victory?"
+			puts "Any comment your team would like to make on this galiant victory Team Id: #{team_id}?"
 			team_comment = gets.chomp
 		else 
 			win = 0
@@ -110,7 +110,7 @@ number_of_teams.times do |number|
 				user_input = gets.chomp
 				if user_input == "yes"
 					team_name = gets.chomp
-					id = number
+					id = number + 1
 					team_name_change(db, team_name, id)
 				end
 		end
