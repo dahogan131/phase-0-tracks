@@ -58,15 +58,17 @@
       </ul>
     </section>
   </section>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type= "text/Javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
 
-<script $(document).ready(function() {
+<script type="text/javascript">
+ $(document).ready(function(){ //Basic syntax
+  $('#contact-info').hide(300).show(300);
+  $('#resume-title').slideUp(1000).slideDown(1000);
+  $('.job').css({color:'red',fontWeight:'bold'});
 
-
-});
-
-
+ });
 </script>
+
 </body>
 </html>
