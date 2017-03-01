@@ -1,0 +1,2 @@
+* My game plan for tackling jQuery is to set a limit on the time invested on rabbit holes and being conscious of when it is time to take a break. 
+	*I'm thinking I can work an hour at a time, with a break in the middle. With rabbit holes, my plan is to initially spend 15 minutes pursuing it. After 15 minutes, I determine if I am frustrated or constructively pursuing it. I also look at the remaining material and determine if the rabbit hole I am pursuing is absolutely neccessary to continue with learning jQuery. 
