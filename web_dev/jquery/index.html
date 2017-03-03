@@ -11,7 +11,9 @@
 			<li>Camper who call park ranger</li>
 			<li>Cuban cigars with no after-dinner cognac</li>
 	<input type="button" value="More Things That Make Me Angry" id="angry-button" />
-		<div>Allen at work</div>
+		<div id="allen">Allen at work</div>
+	<input type="button" value="Know What Else Make Bigfoot Angry?" id="other-button"/>
+		<div id="funyon">Roommate Derek the Tree Elf eating funyons at 3am</div>
 
 <script type= "text/Javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="jquery/click.js"></script>
@@ -21,9 +23,15 @@
  $(document).ready(function(){ //Basic syntax
   $('#bigfoot-angry').hide(300).show(300);
   $('.angry-list').css({color: 'red'});
-  $('div').hide();
+  $('#allen').hide();
+  $('#other-button').hide();
+  $('#funyon').hide();
   	$('#angry-button').click(function(){
-  		$('div').show();
+  		$('#allen').show();
+  		$('#other-button').show();
+  	});
+  	$('#other-button').click(function(){
+  		$('#funyon').show();
   	});
  });
 </script>
