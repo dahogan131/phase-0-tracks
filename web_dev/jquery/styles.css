@@ -2,3 +2,13 @@ h1#bigfoot-angry {
 	border-style: solid;
     border-width: 5px;
 }
+
+img#bigfoot-pic {
+	position: relative;
+	
+}
+
+input#happy-button {
+	position: relative;
+	
+}
