@@ -14,6 +14,8 @@
 		<div id="allen">Allen at work</div>
 	<input type="button" value="Know What Else Make Bigfoot Angry?" id="other-button"/>
 		<div id="funyon">Roommate Derek the Tree Elf eating funyons at 3am</div>
+	<input type="button" value="Bigfoot Happy" id="happy-button"/>
+		<img id='bigfoot-pic' src=bigfoot_happy.jpg alt="happy bigfoot picture">
 
 <script type= "text/Javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="jquery/click.js"></script>
@@ -26,12 +28,18 @@
   $('#allen').hide();
   $('#other-button').hide();
   $('#funyon').hide();
+  $('#bigfoot-pic').hide();
+  $('#happy-button').hide()
   	$('#angry-button').click(function(){
   		$('#allen').show();
   		$('#other-button').show();
   	});
   	$('#other-button').click(function(){
   		$('#funyon').show();
+  		$('#happy-button').show()
+  	});
+  	$('#happy-button').click(function(){
+  		$('#bigfoot-pic').show()
   	});
  });
 </script>
