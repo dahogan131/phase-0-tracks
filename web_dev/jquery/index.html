@@ -5,17 +5,50 @@
 	<link rel='stylesheet' href='styles.css' type='text/css'>
 </head>
 <body>
-<h1 id="bigfoot-angry">What Make Bigfoot Angry</h1>
-	<ul class="angry-list">
-		<li>Man with picnic basket who no share.</li>
-		<li>Camper who call park ranger</li>
-		<li>Cuban cigars with no after-dinner cognac</li>
+	<h1 id="bigfoot-angry">What Make Bigfoot Angry</h1>
+		<ul class="angry-list">
+			<li>Man with picnic basket who no share.</li>
+			<li>Camper who call park ranger</li>
+			<li>Cuban cigars with no after-dinner cognac</li>
+	<input type="button" value="More Things That Make Me Angry" id="angry-button" />
+		<div id="allen">Allen at work</div>
+	<input type="button" value="Know What Else Make Bigfoot Angry?" id="other-button"/>
+		<div id="funyon">Roommate Derek the Tree Elf eating funyons at 3am</div>
+	<input type="button" value="Bigfoot Happy" id="happy-button"/>
+		<div><img id='bigfoot-pic' src="bigfoot_happy.jpg" alt="happy bigfoot picture"></div>
+	<input type="button" value="What Make Bigfoot Happy" id="make-happy-button"/>
+		<div><img id='nick-cage' src="cage.gif" alt="cage dancing"></div>
 
 <script type= "text/Javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="jquery/click.js"></script>
+
 
 <script type="text/javascript">
  $(document).ready(function(){ //Basic syntax
   $('#bigfoot-angry').hide(300).show(300);
+  $('.angry-list').css({color: 'red'});
+  $('#allen').hide();
+  $('#other-button').hide();
+  $('#funyon').hide();
+  $('#bigfoot-pic').hide();
+  $('#happy-button').hide()
+  $('#make-happy-button').hide()
+  $('#nick-cage').hide()
+  	$('#angry-button').click(function(){
+  		$('#allen').show();
+  		$('#other-button').show();
+  	});
+  	$('#other-button').click(function(){
+  		$('#funyon').show();
+  		$('#happy-button').show()
+  	});
+  	$('#happy-button').click(function(){
+  		$('#bigfoot-pic').show()
+  		 $('#make-happy-button').show()
+  	});
+  	 $('#make-happy-button').click(function(){
+  	 	$('#nick-cage').show()
+  	 });
  });
 </script>
 
