@@ -5,17 +5,26 @@
 	<link rel='stylesheet' href='styles.css' type='text/css'>
 </head>
 <body>
-<h1 id="bigfoot-angry">What Make Bigfoot Angry</h1>
-	<ul class="angry-list">
-		<li>Man with picnic basket who no share.</li>
-		<li>Camper who call park ranger</li>
-		<li>Cuban cigars with no after-dinner cognac</li>
+	<h1 id="bigfoot-angry">What Make Bigfoot Angry</h1>
+		<ul class="angry-list">
+			<li>Man with picnic basket who no share.</li>
+			<li>Camper who call park ranger</li>
+			<li>Cuban cigars with no after-dinner cognac</li>
+	<input type="button" value="More Things That Make Me Angry" id="angry-button" />
+		<div>Allen at work</div>
 
 <script type= "text/Javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="jquery/click.js"></script>
+
 
 <script type="text/javascript">
  $(document).ready(function(){ //Basic syntax
   $('#bigfoot-angry').hide(300).show(300);
+  $('.angry-list').css({color: 'red'});
+  $('div').hide();
+  	$('#angry-button').click(function(){
+  		$('div').show();
+  	});
  });
 </script>
 
