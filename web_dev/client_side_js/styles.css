@@ -2,7 +2,12 @@ body {
 	background-image: url("bigfoot_background.jpg"); 
 }
 
+
 .header {
-	color: green;
+	color: #339933;
+	background-color: #993300;
 }
 
+div {
+	color: #800000;
+}
