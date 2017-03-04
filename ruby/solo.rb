@@ -72,11 +72,13 @@ class HangMan
     p "Insert a word to be guessed!"
     @name = gets.chomp.chars
     @number_guesses = @name.length + 3
-    @blank_space = "_" * (@number_guesses - 3)
+    @blank_space = "_" * @name.length
     p @blank_space
     @game_over = false
     p @number_guesses
   end
+  
+#Every time user puts in a character, we want to see if it's present in that string.
   def fill_blank_space
   guess = 0
   index = 0
@@ -86,6 +88,7 @@ class HangMan
    @user_input = gets.chomp
     @blank_space = @blank_space.chars
     @name = name
+# Iterate through the string to see if user input matches any of the characters in the string. 
     if @user_input == @name[index] 
        @blank_space.delete_at(index)
        @blank_space.insert(index, @name[index])

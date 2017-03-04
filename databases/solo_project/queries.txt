@@ -1,0 +1,91 @@
+RELEASE 2:
+
+1. DISPLAY INFORMATION IN ONE TABLE
+sqlite> SELECT * FROM ship
+   ...> ;
+1|Elon's Rocket|Space-X
+2|Apollo 11|NASA
+3|Not Elon's Rocket|Lockheed Martin
+sqlite> 
+
+2. UPDATE AN ITEM THAT MEETS SOME CONDITION
+
+* Changed planet that Not Elon's Rocket travelled to from Uranus to Saturn. 
+
+sqlite> UPDATE planets SET planet_name="Saturn" WHERE ship_id=3;
+sqlite> SELECT * FROM ship, planets WHERE planets.ship_id = ship.id;
+1|Elon's Rocket|Space-X|1|Mars|true|1
+2|Apollo 11|NASA|2|Moon|false|2
+3|Not Elon's Rocket|Lockheed Martin|3|Saturn|false|3
+1|Elon's Rocket|Space-X|4|Jupiter|false|1
+sqlite> 
+
+3. DISPLAY INFORMATION IN BOTH QUERIES
+
+sqlite> SELECT * FROM ship, planets WHERE planets.ship_id = ship.id;1|Elon's Rocket|Space-X|1|Mars|true|1
+2|Apollo 11|NASA|2|Moon|false|2
+3|Not Elon's Rocket|Lockheed Martin|3|Uranus|false|3
+1|Elon's Rocket|Space-X|4|Jupiter|false|1
+
+4. DISPLAY NARROW SELECTION OF COLUMNS
+
+sqlite> SELECT ship_id, ship_name, planet_name, manufacturer, habitable FROM ship, planets WHERE planets.ship_id = ship.id;
+1|Elon's Rocket|Mars|Space-X|true
+2|Apollo 11|Moon|NASA|false
+3|Not Elon's Rocket|Saturn|Lockheed Martin|false
+1|Elon's Rocket|Jupiter|Space-X|false
+sqlite> 
+
+5. DELETE ITEM THAT MEETS SOME CONDITION
+
+1|Mars|true|1
+2|Moon|false|2
+3|Saturn|false|3
+4|Jupiter|false|1
+5|Mercury|false|2
+sqlite> DELETE FROM planets WHERE planet_name="Mercury";
+sqlite> SELECT * FROM planets
+   ...> ;
+1|Mars|true|1
+2|Moon|false|2
+3|Saturn|false|3
+4|Jupiter|false|1
+sqlite> 
+
+RELEASE 3:
+
+2. TRY OUT JOINS IN DATABASE
+
+*INNER JOIN
+
+sqlite> SELECT ship.ship_name, planets.planet_name FROM ship JOIN planets ON planets.ship_id = ship.id;
+
+Elon's Rocket|Mars
+Apollo 11|Moon
+Not Elon's Rocket|Saturn
+Elon's Rocket|Jupiter
+
+*LEFT JOIN
+*Returned all rows from left table, even when I shanged the conditional so that there were no matches. 
+
+*This  Left join returns both, because ship_name and manufacturer are both on the left table:
+
+sqlite> SELECT ship.ship_name, ship.manufacturer FROM ship LEFT JOIN planets ON planets.ship_id = ship.ship_name;
+Elon's Rocket|Space-X
+Apollo 11|NASA
+Not Elon's Rocket|Lockheed Martin
+
+*This Left Join only returns ship_name, because planet_name is located on the right table and does not get returned.
+
+sqlite> SELECT ship.ship_name, planets.planet_name FROM ship LEFT JOIN planets ON planets.ship_id = ship.ship_name;
+Elon's Rocket|
+Apollo 11|
+Not Elon's Rocket|
+
+
+
+
+
+
+
+
